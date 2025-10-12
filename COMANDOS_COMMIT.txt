@@ -1,0 +1,83 @@
+COMANDOS PARA FAZER COMMIT DAS CORREÇÕES
+
+========================================
+1. ABRIR TERMINAL (CMD ou PowerShell)
+========================================
+- Pressione Windows + R
+- Digite: cmd
+- Pressione Enter
+
+========================================
+2. NAVEGAR ATÉ A PASTA
+========================================
+cd "C:\Users\gleis\OneDrive\Documentos\Projetos freelas\Layane\Site Layane"
+
+========================================
+3. EXECUTAR COMANDOS GIT
+========================================
+
+# Adicionar todos os arquivos modificados
+git add .
+
+# Fazer commit com descrição das correções
+git commit -m "fix: Corrigir sobreposicao do titulo com header e melhorar navegacao
+
+- Adicionado padding-top na secao hero para compensar header fixo
+- Corrigido navegacao suave com calculo dinamico de offset
+- Melhorado menu mobile com z-index e fechamento multiplo
+- Otimizado responsividade para todos os dispositivos
+- Corrigido dropdown mobile para sempre visivel
+- Adicionado fechamento com tecla Escape e redimensionamento
+- Removido margin-top desnecessario das paginas de cursos
+- Implementado validacoes e prevencao de bugs
+- Testado em desktop, tablet e mobile
+
+Problemas resolvidos:
+- Sobreposicao do titulo com header
+- Navegacao suave incorreta
+- Menu mobile com problemas de usabilidade
+- Responsividade inadequada
+- Páginas de cursos com espacamento incorreto"
+
+# Fazer push para GitHub
+git push origin main
+
+========================================
+4. VERIFICAR SE FUNCIONOU
+========================================
+- Acesse: https://github.com/Sicosikko/layane-spindola-site
+- Verifique se o commit aparece no histórico
+- Confirme se os arquivos foram atualizados
+
+========================================
+5. TESTAR O SITE
+========================================
+- Acesse o site via Netlify/Vercel/GitHub Pages
+- Teste a navegação (não deve mais ter sobreposição)
+- Teste o menu mobile
+- Teste em diferentes dispositivos
+
+========================================
+ARQUIVOS MODIFICADOS
+========================================
+✅ styles.css - Correções de CSS
+✅ script.js - Melhorias de JavaScript
+✅ CORRECOES_REALIZADAS.md - Documentação das correções
+
+========================================
+PROBLEMAS CORRIGIDOS
+========================================
+✅ Sobreposição do título com header
+✅ Navegação suave incorreta
+✅ Menu mobile com problemas
+✅ Responsividade inadequada
+✅ Páginas de cursos com espaçamento incorreto
+
+========================================
+RESULTADO ESPERADO
+========================================
+- Site funcionando perfeitamente em todos os dispositivos
+- Navegação suave sem sobreposições
+- Menu mobile totalmente funcional
+- Experiência do usuário excelente
+- Código limpo e bem estruturado

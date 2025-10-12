@@ -34,11 +34,27 @@ function initNavigation() {
                 const targetElement = document.getElementById(targetId);
                 
                 if (targetElement) {
-                    const offsetTop = targetElement.offsetTop - 80; // Account for fixed header
+                    // Calcular offset baseado na altura do header
+                    const headerHeight = header.offsetHeight;
+                    const offsetTop = targetElement.offsetTop - headerHeight - 20; // 20px de margem
+                    
                     window.scrollTo({
-                        top: offsetTop,
+                        top: Math.max(0, offsetTop), // Garantir que não seja negativo
                         behavior: 'smooth'
                     });
+                    
+                    // Fechar menu mobile se estiver aberto
+                    const navMenu = document.getElementById('nav-menu');
+                    const navToggle = document.getElementById('nav-toggle');
+                    if (navMenu && navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        // Reset hamburger animation
+                        const bars = navToggle.querySelectorAll('.bar');
+                        bars.forEach(bar => {
+                            bar.style.transform = 'none';
+                            bar.style.opacity = '1';
+                        });
+                    }
                 }
             }
         });
@@ -235,7 +251,8 @@ function initMobileMenu() {
     const navMenu = document.getElementById('nav-menu');
     
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // Evitar fechar imediatamente
             navMenu.classList.toggle('active');
             
             // Animate hamburger icon
@@ -256,26 +273,44 @@ function initMobileMenu() {
         const navLinks = navMenu.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                const bars = navToggle.querySelectorAll('.bar');
-                bars.forEach(bar => {
-                    bar.style.transform = 'none';
-                    bar.style.opacity = '1';
-                });
+                closeMobileMenu();
             });
         });
         
         // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                const bars = navToggle.querySelectorAll('.bar');
-                bars.forEach(bar => {
-                    bar.style.transform = 'none';
-                    bar.style.opacity = '1';
-                });
+                closeMobileMenu();
             }
         });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Close menu on window resize (desktop)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+    }
+    
+    function closeMobileMenu() {
+        const navMenu = document.getElementById('nav-menu');
+        const navToggle = document.getElementById('nav-toggle');
+        
+        if (navMenu && navToggle) {
+            navMenu.classList.remove('active');
+            const bars = navToggle.querySelectorAll('.bar');
+            bars.forEach(bar => {
+                bar.style.transform = 'none';
+                bar.style.opacity = '1';
+            });
+        }
     }
 }
 

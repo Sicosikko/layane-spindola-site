@@ -216,6 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero {
     min-height: 100vh;
+    padding-top: 80px; /* Compensar altura do header fixo */
     background: linear-gradient(135deg, rgba(74, 124, 89, 0.9), rgba(107, 155, 122, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="leaves" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="2" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="1200" height="800" fill="url(%23leaves)"/></svg>');
     background-size: cover;
     background-position: center;
@@ -778,6 +779,9 @@ h1, h2, h3, h4, h5, h6 {
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         transform: translateY(-100%);
         transition: transform 0.3s ease;
+        z-index: 999;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 
     .nav-menu.active {
@@ -793,12 +797,42 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0.5rem 0;
     }
 
+    .nav-item.dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: #f8f9fa;
+        margin-top: 0.5rem;
+        border-radius: 8px;
+        padding: 0.5rem 0;
+    }
+
+    .dropdown-menu li {
+        margin: 0;
+    }
+
+    .dropdown-menu a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
     .nav-cta {
         margin: 1rem 0 0 0;
     }
 
     .nav-toggle {
         display: flex;
+    }
+
+    .hero {
+        padding-top: 70px; /* Ajustar para mobile */
+        min-height: calc(100vh - 70px);
     }
 
     .hero .container {
@@ -854,6 +888,11 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 15px;
     }
 
+    .hero {
+        padding-top: 60px; /* Ajustar para telas muito pequenas */
+        min-height: calc(100vh - 60px);
+    }
+
     .hero-title {
         font-size: 2rem;
     }
@@ -878,7 +917,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 8rem 0 4rem;
     background: linear-gradient(135deg, #4a7c59, #6b9b7a);
     color: white;
-    margin-top: 80px;
+    margin-top: 0; /* Removido margin-top pois já tem padding */
 }
 
 .curso-hero-content {
