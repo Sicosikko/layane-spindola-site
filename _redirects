@@ -1,0 +1,16 @@
+# Netlify redirects file
+# This ensures all routes work properly for a single-page application
+
+# Redirect all 404s to index.html (for client-side routing)
+/*    /index.html   200
+
+# Specific redirects for course pages (when they're created)
+/terapeuta-alta-performance    /terapeuta-alta-performance.html    200
+/guia-pratico-naturopatia      /guia-pratico-naturopatia.html      200
+/programa-aceleracao-agape     /programa-aceleracao-agape.html     200
+/protocolos-terapeuticos       /protocolos-terapeuticos.html       200
+
+# Redirect old URLs to new ones (if needed)
+/sobre-mim    /#sobre    301
+/cursos-online    /#cursos    301
+/produtos    /#cursos    301

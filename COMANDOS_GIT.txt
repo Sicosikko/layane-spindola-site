@@ -1,0 +1,110 @@
+COMANDOS PARA EXECUTAR NO TERMINAL (CMD ou PowerShell)
+
+========================================
+1. ABRIR TERMINAL
+========================================
+- Pressione Windows + R
+- Digite: cmd
+- Pressione Enter
+
+========================================
+2. NAVEGAR ATÉ A PASTA
+========================================
+cd "C:\Users\gleis\OneDrive\Documentos\Projetos freelas\Layane\Site Layane"
+
+========================================
+3. INICIALIZAR REPOSITÓRIO GIT
+========================================
+git init
+
+========================================
+4. ADICIONAR TODOS OS ARQUIVOS
+========================================
+git add .
+
+========================================
+5. FAZER COMMIT INICIAL
+========================================
+git commit -m "feat: Site completo Layane Spindola - Portal profissional otimizado para conversao"
+
+========================================
+6. CRIAR REPOSITÓRIO NO GITHUB
+========================================
+1. Acesse: https://github.com
+2. Clique em "New repository"
+3. Nome: layane-spindola-site
+4. Descrição: Site profissional da terapeuta naturalista Layane Spindola
+5. Marque "Public"
+6. NÃO marque "Add a README file"
+7. Clique em "Create repository"
+
+========================================
+7. CONECTAR COM GITHUB
+========================================
+git remote add origin https://github.com/SEU_USUARIO/layane-spindola-site.git
+
+(Substitua SEU_USUARIO pelo seu username do GitHub)
+
+========================================
+8. RENOMEAR BRANCH
+========================================
+git branch -M main
+
+========================================
+9. FAZER PUSH
+========================================
+git push -u origin main
+
+========================================
+10. VERIFICAR
+========================================
+- Acesse seu repositório no GitHub
+- Você deve ver todos os arquivos do site
+
+========================================
+COMANDOS ALTERNATIVOS (se der erro)
+========================================
+
+Se der erro de autenticação:
+git config --global user.name "Seu Nome"
+git config --global user.email "seu.email@gmail.com"
+
+Se der erro de repositório:
+git remote remove origin
+git remote add origin https://github.com/SEU_USUARIO/layane-spindola-site.git
+
+Se der erro de branch:
+git checkout -b main
+git push -u origin main
+
+========================================
+APÓS O PUSH - DEPLOY
+========================================
+
+OPÇÃO 1 - NETLIFY (Recomendado):
+1. Acesse: https://netlify.com
+2. Conecte com GitHub
+3. Selecione o repositório layane-spindola-site
+4. Deploy automático
+
+OPÇÃO 2 - VERCEL:
+1. Acesse: https://vercel.com
+2. Conecte com GitHub
+3. Importe o repositório
+4. Deploy automático
+
+OPÇÃO 3 - GITHUB PAGES:
+1. Vá em Settings > Pages
+2. Source: Deploy from a branch
+3. Branch: main
+4. Folder: / (root)
+5. Aguarde 5-10 minutos
+
+========================================
+RESULTADO FINAL
+========================================
+- Repositório no GitHub com todo o código
+- Site online e acessível
+- Deploy automático a cada mudança
+- URL pública para compartilhar
+- Controle de versão completo
