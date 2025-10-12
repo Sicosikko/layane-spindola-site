@@ -1,0 +1,122 @@
+COMANDOS PERSONALIZADOS PARA SEU REPOSITÓRIO
+Repositório: Sicosikko/layane-spindola-site
+
+========================================
+1. ABRIR TERMINAL (CMD ou PowerShell)
+========================================
+- Pressione Windows + R
+- Digite: cmd
+- Pressione Enter
+
+========================================
+2. NAVEGAR ATÉ A PASTA
+========================================
+cd "C:\Users\gleis\OneDrive\Documentos\Projetos freelas\Layane\Site Layane"
+
+========================================
+3. EXECUTAR COMANDOS GIT
+========================================
+
+# Inicializar repositório
+git init
+
+# Adicionar todos os arquivos do site
+git add .
+
+# Fazer commit com descrição completa
+git commit -m "feat: Site completo Layane Spindola - Portal profissional otimizado para conversao
+
+- Site responsivo com design moderno e acolhedor
+- Cores verde/azul para evocar vitalidade e confianca
+- Copy persuasivo focado em conversao
+- 4 secoes principais: Hero, Sobre, Cursos, Ebook
+- Formulario de captura de leads funcional
+- SEO otimizado com meta tags completas
+- Animações suaves e interatividade
+- Configuracao para deploy (Netlify, Vercel, GitHub Pages)
+- Pronto para producao"
+
+# Renomear branch para main
+git branch -M main
+
+# Conectar com seu repositório GitHub
+git remote add origin git@github.com:Sicosikko/layane-spindola-site.git
+
+# Fazer push para GitHub
+git push -u origin main
+
+========================================
+4. VERIFICAR SE FUNCIONOU
+========================================
+- Acesse: https://github.com/Sicosikko/layane-spindola-site
+- Você deve ver todos os arquivos do site
+- O commit deve aparecer no histórico
+
+========================================
+5. DEPLOY AUTOMÁTICO
+========================================
+
+OPÇÃO 1 - NETLIFY (Recomendado):
+1. Acesse: https://netlify.com
+2. Conecte com GitHub
+3. Selecione o repositório: Sicosikko/layane-spindola-site
+4. Deploy automático em 2 minutos
+5. URL será gerada automaticamente
+
+OPÇÃO 2 - VERCEL:
+1. Acesse: https://vercel.com
+2. Conecte com GitHub
+3. Importe o repositório: Sicosikko/layane-spindola-site
+4. Deploy automático
+
+OPÇÃO 3 - GITHUB PAGES:
+1. Vá em Settings > Pages
+2. Source: Deploy from a branch
+3. Branch: main
+4. Folder: / (root)
+5. Aguarde 5-10 minutos
+6. URL: https://sicosikko.github.io/layane-spindola-site
+
+========================================
+6. ARQUIVOS QUE SERÃO ENVIADOS
+========================================
+✅ index.html - Página principal
+✅ styles.css - Estilos CSS
+✅ script.js - JavaScript
+✅ config.js - Configurações
+✅ exemplo-curso.html - Template de curso
+✅ README.md - Documentação
+✅ DEPLOY.md - Guia de deploy
+✅ PREVIEW_REMOTO.md - Guia de preview
+✅ COMO_VISUALIZAR.md - Instruções rápidas
+✅ INSTRUCOES_GITHUB.md - Instruções GitHub
+✅ .gitignore - Controle de versão
+✅ netlify.toml - Configuração Netlify
+✅ vercel.json - Configuração Vercel
+✅ _redirects - Redirecionamentos
+✅ deploy.bat - Script de deploy
+✅ configurar-git.bat - Script de configuração
+✅ COMANDOS_GIT.txt - Comandos Git
+✅ COMANDOS_PERSONALIZADOS.txt - Este arquivo
+
+========================================
+7. RESULTADO FINAL
+========================================
+- Repositório: https://github.com/Sicosikko/layane-spindola-site
+- Site online e acessível
+- Deploy automático a cada mudança
+- URL pública para compartilhar com Layane
+- Controle de versão completo
+- Fácil manutenção e atualizações
+
+========================================
+8. PRÓXIMOS PASSOS
+========================================
+1. Execute os comandos acima
+2. Verifique se o push funcionou
+3. Faça o deploy via Netlify (recomendado)
+4. Teste o site em diferentes dispositivos
+5. Compartilhe a URL com Layane
+6. Configure domínio personalizado (opcional)
+7. Adicione imagens reais
+8. Configure Google Analytics
