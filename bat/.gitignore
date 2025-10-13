@@ -1,0 +1,10 @@
+# GitHub Actions - DESABILITADO (usamos Netlify) 
+.github/ 
+.github/** 
+.github/workflows/** 
+.github/workflows/*.yml 
+.github/workflows/*.yaml 
+deploy.yml 
+deploy.yaml 
+gh-pages.yml 
+gh-pages.yaml 
