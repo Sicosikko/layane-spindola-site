@@ -14,31 +14,7 @@ git add -A
 
 echo.
 echo Fazendo commit das melhorias de design...
-git commit -m "design: Melhorar layout da secao de cursos e corrigir contraste do botao
-
-MELHORIAS DE DESIGN:
-- Grid de cursos ajustado: 3 em cima, 1 centralizado embaixo
-- Quarto card posicionado exatamente abaixo do curso 2 (centro)
-- Layout mais harmonioso, simetrico e profissional
-- Melhor aproveitamento do espaco e estetica visual
-
-CORRECOES DE CONTRASTE:
-- Botao outline com contraste corrigido
-- Verde escuro (#2c5530) em fundo claro
-- Branco em fundo escuro (hero/ebook)
-- Hover com background verde e texto branco
-- Totalmente visivel em todas as secoes
-
-RESPONSIVIDADE:
-- Mobile: 1 coluna (empilhado)
-- Tablet: 2 colunas
-- Desktop: 3 em cima, 1 centralizado
-
-RESULTADO:
-- Layout mais equilibrado visualmente
-- Botoes com contraste perfeito
-- Design profissional e moderno
-- Experiencia do usuario melhorada"
+git commit -m "design: Melhorar layout da secao de cursos e corrigir contraste do botao - Grid ajustado 3+1 centralizado - Botao outline com contraste corrigido - Responsividade mantida"
 
 if %errorlevel% equ 0 (
     echo.
