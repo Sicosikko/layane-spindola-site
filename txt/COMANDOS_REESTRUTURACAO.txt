@@ -1,0 +1,128 @@
+COMANDOS PARA COMMIT DA REESTRUTURAÇÃO DE PASTAS
+
+========================================
+1. ABRIR TERMINAL (CMD ou PowerShell)
+========================================
+- Pressione Windows + R
+- Digite: cmd
+- Pressione Enter
+
+========================================
+2. NAVEGAR ATÉ A PASTA
+========================================
+cd "C:\Users\gleis\OneDrive\Documentos\Projetos freelas\Layane\Site Layane"
+
+========================================
+3. EXECUTAR COMANDOS GIT
+========================================
+
+# Verificar status atual
+git status
+
+# Adicionar todos os arquivos da nova estrutura
+git add .
+
+# Fazer commit da reestruturação
+git commit -m "refactor: Reestruturar organizacao dos arquivos em pastas
+
+- Criada pasta 'html/' para arquivos HTML
+- Criada pasta 'css/' para arquivos CSS
+- Criada pasta 'javascript/' para arquivos JS
+- Criada pasta 'md/' para documentacao Markdown
+- Criada pasta 'bat/' para scripts batch
+- Criada pasta 'txt/' para arquivos de texto
+- Mantidos arquivos de configuracao na raiz
+- Organizacao mais limpa e profissional
+- Facilita manutencao e navegacao do projeto
+
+Estrutura final:
+- html/ (index.html, exemplo-curso.html)
+- css/ (styles.css)
+- javascript/ (script.js, config.js)
+- md/ (documentacao completa)
+- bat/ (scripts de automação)
+- txt/ (comandos e instruções)
+- raiz/ (configurações de deploy)"
+
+# Fazer push para GitHub
+git push origin main
+
+========================================
+4. VERIFICAR SE FUNCIONOU
+========================================
+- Acesse: https://github.com/Sicosikko/layane-spindola-site
+- Verifique se a nova estrutura de pastas aparece
+- Confirme se todos os arquivos foram movidos corretamente
+
+========================================
+5. ATUALIZAR LINKS (SE NECESSÁRIO)
+========================================
+Se houver links internos quebrados, atualize:
+- Referências a styles.css → css/styles.css
+- Referências a script.js → javascript/script.js
+- Referências a config.js → javascript/config.js
+
+========================================
+ESTRUTURA FINAL ORGANIZADA
+========================================
+📁 html/
+  - index.html
+  - exemplo-curso.html
+
+📁 css/
+  - styles.css
+
+📁 javascript/
+  - script.js
+  - config.js
+
+📁 md/
+  - README.md
+  - DEPLOY.md
+  - PREVIEW_REMOTO.md
+  - COMO_VISUALIZAR.md
+  - INSTRUCOES_GITHUB.md
+  - RESUMO_EXECUTIVO.md
+  - CORRECOES_REALIZADAS.md
+  - CORRECOES_CONTRASTE.md
+  - CORRECOES_HEADER.md
+
+📁 bat/
+  - commit-contraste.bat
+  - commit-correcoes.bat
+  - commit-header.bat
+  - configurar-git.bat
+  - deploy.bat
+  - git-commit.bat
+  - push-para-github.bat
+  - commit-reestruturacao.bat
+
+📁 txt/
+  - COMANDOS_COMMIT.txt
+  - COMANDOS_GIT.txt
+  - COMANDOS_PERSONALIZADOS.txt
+  - COMANDOS_REESTRUTURACAO.txt
+
+📁 raiz/
+  - _redirects
+  - netlify.toml
+  - vercel.json
+
+========================================
+BENEFÍCIOS DA REESTRUTURAÇÃO
+========================================
+✅ Organização mais limpa e profissional
+✅ Facilita manutenção do código
+✅ Melhora navegação do projeto
+✅ Separação clara por tipo de arquivo
+✅ Estrutura escalável para futuras expansões
+✅ Padrão de organização consistente
+
+========================================
+RESULTADO ESPERADO
+========================================
+- Repositório GitHub com estrutura organizada
+- Todos os arquivos nas pastas corretas
+- Links funcionando corretamente
+- Projeto mais profissional e manutenível
+- Facilidade para futuras atualizações

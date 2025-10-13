@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 10px 24px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
     border: 2px solid transparent;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .btn-primary {
@@ -117,14 +117,14 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .nav-logo h2 {
     color: #1e3a22;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin: 0;
     font-weight: 700;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-item {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     position: relative;
 }
 
@@ -155,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 8px;
 }
 
@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-cta {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .nav-cta .btn {
@@ -234,7 +234,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    padding-top: 100px; /* Aumentar padding para compensar header fixo */
+    padding-top: 80px; /* Reduzido para compensar header menor */
     background: linear-gradient(135deg, rgba(74, 124, 89, 0.9), rgba(107, 155, 122, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="leaves" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="2" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="1200" height="800" fill="url(%23leaves)"/></svg>');
     background-size: cover;
     background-position: center;
@@ -856,8 +856,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero {
-        padding-top: 90px; /* Ajustar para mobile */
-        min-height: calc(100vh - 90px);
+        padding-top: 70px; /* Ajustar para mobile */
+        min-height: calc(100vh - 70px);
     }
 
     .hero .container {
@@ -914,8 +914,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero {
-        padding-top: 80px; /* Ajustar para telas muito pequenas */
-        min-height: calc(100vh - 80px);
+        padding-top: 60px; /* Ajustar para telas muito pequenas */
+        min-height: calc(100vh - 60px);
     }
 
     .hero-title {
