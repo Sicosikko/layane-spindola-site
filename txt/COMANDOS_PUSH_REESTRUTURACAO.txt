@@ -1,0 +1,158 @@
+COMANDOS PARA PUSH DA REESTRUTURAÇÃO PARA GITHUB
+
+========================================
+PROBLEMA IDENTIFICADO
+========================================
+- A reestruturação de pastas foi feita localmente
+- Mas não foi enviada para o GitHub
+- O repositório ainda mostra arquivos na raiz
+- Por isso o Netlify está retornando 404
+
+========================================
+SOLUÇÃO: PUSH DA NOVA ESTRUTURA
+========================================
+
+1. ABRIR TERMINAL (CMD ou PowerShell)
+   - Pressione Windows + R
+   - Digite: cmd
+   - Pressione Enter
+
+2. NAVEGAR ATÉ A PASTA
+   cd "C:\Users\gleis\OneDrive\Documentos\Projetos freelas\Layane\Site Layane"
+
+3. VERIFICAR STATUS
+   git status
+
+4. ADICIONAR TODOS OS ARQUIVOS
+   git add .
+
+5. FAZER COMMIT DA REESTRUTURAÇÃO
+   git commit -m "refactor: Reestruturar organizacao dos arquivos em pastas
+
+   - Criada pasta 'html/' para arquivos HTML
+   - Criada pasta 'css/' para arquivos CSS  
+   - Criada pasta 'javascript/' para arquivos JS
+   - Criada pasta 'md/' para documentacao Markdown
+   - Criada pasta 'bat/' para scripts batch
+   - Criada pasta 'txt/' para arquivos de texto
+   - Criado index.html na raiz para resolver 404 do Netlify
+   - Atualizado _redirects para nova estrutura
+   - Corrigidas referencias CSS e JS nos HTMLs
+   - Organizacao mais limpa e profissional
+
+   Estrutura final:
+   - html/ (index.html, exemplo-curso.html)
+   - css/ (styles.css)
+   - javascript/ (script.js, config.js)
+   - md/ (documentacao completa)
+   - bat/ (scripts de automação)
+   - txt/ (comandos e instruções)
+   - raiz/ (index.html, configurações de deploy)
+
+   Problemas resolvidos:
+   - Page not found no Netlify
+   - Estrutura desorganizada
+   - Referencias quebradas
+   - Deploy nao funcionando"
+
+6. FAZER PUSH PARA GITHUB
+   git push origin main
+
+========================================
+VERIFICAÇÃO
+========================================
+Após o push, verifique:
+
+1. Acesse: https://github.com/Sicosikko/layane-spindola-site
+2. Confirme se aparecem as pastas:
+   - html/
+   - css/
+   - javascript/
+   - md/
+   - bat/
+   - txt/
+
+3. Aguarde o deploy automático no Netlify
+4. Teste o site: https://layane-spindola-site.netlify.app
+
+========================================
+ESTRUTURA ESPERADA NO GITHUB
+========================================
+📁 html/
+  - index.html
+  - exemplo-curso.html
+
+📁 css/
+  - styles.css
+
+📁 javascript/
+  - script.js
+  - config.js
+
+📁 md/
+  - README.md
+  - DEPLOY.md
+  - PREVIEW_REMOTO.md
+  - COMO_VISUALIZAR.md
+  - INSTRUCOES_GITHUB.md
+  - RESUMO_EXECUTIVO.md
+  - README_ESTRUTURA.md
+
+📁 bat/
+  - commit-contraste.bat
+  - commit-correcoes.bat
+  - commit-header.bat
+  - configurar-git.bat
+  - deploy.bat
+  - git-commit.bat
+  - push-para-github.bat
+  - commit-reestruturacao.bat
+  - fix-deploy.bat
+  - push-reestruturacao.bat
+
+📁 txt/
+  - COMANDOS_COMMIT.txt
+  - COMANDOS_GIT.txt
+  - COMANDOS_PERSONALIZADOS.txt
+  - COMANDOS_REESTRUTURACAO.txt
+  - COMANDOS_PUSH_REESTRUTURACAO.txt
+
+📁 raiz/
+  - index.html (para resolver 404)
+  - _redirects
+  - netlify.toml
+  - vercel.json
+
+========================================
+RESULTADO ESPERADO
+========================================
+✅ Estrutura organizada no GitHub
+✅ Site carregando corretamente no Netlify
+✅ Todas as referências funcionando
+✅ Deploy funcionando perfeitamente
+✅ Organização profissional mantida
+
+========================================
+TROUBLESHOOTING
+========================================
+Se ainda der problema:
+
+1. Verifique se o Git está configurado:
+   git config --list
+
+2. Verifique se está na branch correta:
+   git branch
+
+3. Force o push se necessário:
+   git push -f origin main
+
+4. Verifique os logs do Netlify no painel de controle
+
+========================================
+PRÓXIMOS PASSOS
+========================================
+1. Executar os comandos acima
+2. Verificar se a estrutura aparece no GitHub
+3. Aguardar deploy automático (2-3 minutos)
+4. Testar o site no Netlify
+5. Confirmar que tudo está funcionando

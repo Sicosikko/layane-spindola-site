@@ -1,0 +1,118 @@
+COMANDOS PARA FORCAR REMOCAO DO GITHUB ACTIONS
+
+========================================
+PROBLEMA
+========================================
+- GitHub Actions ainda esta executando
+- Erro 403 continua aparecendo
+- Workflow deploy.yml ainda existe no repositorio
+- Precisamos forcar a remocao
+
+========================================
+SOLUCAO: FORCAR REMOCAO
+========================================
+
+OPCAO 1: SCRIPT AUTOMATICO
+- Execute: bat\force-remove-github-actions.bat
+
+OPCAO 2: COMANDOS MANUAIS
+
+1. ABRIR TERMINAL (CMD)
+   - Pressione Windows + R
+   - Digite: cmd
+   - Pressione Enter
+
+2. NAVEGAR ATE A PASTA
+   cd "C:\Users\gleis\OneDrive\Documentos\Projetos freelas\Layane\Site Layane"
+
+3. REMOVER PASTA .GITHUB (SE EXISTIR)
+   if exist ".github" rmdir /s /q ".github"
+
+4. ADICIONAR .GITHUB AO .GITIGNORE
+   echo .github/ >> .gitignore
+
+5. ADICIONAR TODAS AS MUDANCAS
+   git add .
+
+6. FAZER COMMIT DA REMOCAO FORCADA
+   git commit -m "fix: Forcar remocao do GitHub Actions
+
+   - Removida pasta .github completamente
+   - Adicionado .github/ ao .gitignore
+   - GitHub Actions desnecessario removido
+   - Evita erro 403 do github-actions[bot]
+   - Deploy via Netlify mantido
+
+   Problema resolvido:
+   - Workflow deploy.yml removido
+   - Erro 403 nao vai mais aparecer
+   - Deploy via Netlify continua funcionando
+   - Emails de erro nao serao mais enviados"
+
+7. FAZER PUSH PARA GITHUB
+   git push origin main
+
+========================================
+ALTERNATIVA: REMOVER VIA GITHUB WEB
+========================================
+Se os comandos nao funcionarem:
+
+1. Acesse: https://github.com/Sicosikko/layane-spindola-site
+2. Vá para a pasta .github/workflows/
+3. Clique em deploy.yml
+4. Clique no lixeira (Delete file)
+5. Digite "Remove GitHub Actions workflow"
+6. Clique em "Commit changes"
+
+========================================
+VERIFICACAO
+========================================
+Apos executar:
+
+1. Aguarde 1-2 minutos
+2. Verifique se o erro parou de aparecer
+3. Confirme que o Netlify continua funcionando
+4. Teste o site normalmente
+
+========================================
+O QUE SERA FEITO
+========================================
+✅ Pasta .github removida localmente
+✅ .github/ adicionado ao .gitignore
+✅ Commit enviado para GitHub
+✅ Workflow sera removido do repositorio
+✅ Erro 403 nao vai mais aparecer
+
+========================================
+RESULTADO ESPERADO
+========================================
+- GitHub Actions removido completamente
+- Erro 403 resolvido
+- Deploy via Netlify mantido
+- Site funcionando perfeitamente
+- Sem emails de erro
+- Workflow nao sera mais executado
+
+========================================
+TROUBLESHOOTING
+========================================
+Se ainda der erro:
+
+1. Verifique se o commit foi feito:
+   git log --oneline -5
+
+2. Verifique se o push foi feito:
+   git status
+
+3. Force o push se necessario:
+   git push -f origin main
+
+4. Verifique no GitHub se a pasta .github foi removida
+
+========================================
+IMPORTANTE
+========================================
+- O Netlify continuara funcionando normalmente
+- Apenas o GitHub Actions sera removido
+- Nao havera impacto no site
+- O deploy automatico via Netlify sera mantido

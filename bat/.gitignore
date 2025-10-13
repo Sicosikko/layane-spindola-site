@@ -1,10 +1,11 @@
-# GitHub Actions - DESABILITADO (usamos Netlify) 
-.github/ 
-.github/** 
-.github/workflows/** 
-.github/workflows/*.yml 
-.github/workflows/*.yaml 
-deploy.yml 
-deploy.yaml 
-gh-pages.yml 
-gh-pages.yaml 
+# GitHub Actions - DESABILITADO (usamos Netlify)
+.github/
+
+# Arquivos temporarios
+*.tmp
+*.temp
+*.log
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db

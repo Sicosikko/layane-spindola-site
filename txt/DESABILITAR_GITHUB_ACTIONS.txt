@@ -1,0 +1,106 @@
+DESABILITAR GITHUB ACTIONS DEFINITIVAMENTE
+
+========================================
+PROBLEMA CRITICO
+========================================
+- GitHub Actions executando a cada commit
+- Todos os 9 deploys falharam com erro 128
+- Workflow deploy.yml ainda existe no repositorio
+- Precisamos desabilitar completamente
+
+========================================
+SOLUCAO DEFINITIVA
+========================================
+
+OPCAO 1: SCRIPT AUTOMATICO
+- Execute: bat\disable-github-actions.bat
+
+OPCAO 2: COMANDOS MANUAIS
+
+1. ABRIR TERMINAL (CMD)
+   - Pressione Windows + R
+   - Digite: cmd
+   - Pressione Enter
+
+2. NAVEGAR ATE A PASTA
+   cd "C:\Users\gleis\OneDrive\Documentos\Projetos freelas\Layane\Site Layane"
+
+3. CRIAR ESTRUTURA PARA DESABILITAR
+   mkdir .github\workflows
+   echo # GitHub Actions desabilitado - usamos Netlify > .github\workflows\disabled.yml
+   echo # Este arquivo substitui o deploy.yml problemático >> .github\workflows\disabled.yml
+   echo # Para deploy, use Netlify: https://netlify.com >> .github\workflows\disabled.yml
+
+4. REMOVER WORKFLOW PROBLEMATICO (SE EXISTIR)
+   if exist ".github\workflows\deploy.yml" del ".github\workflows\deploy.yml"
+
+5. ADICIONAR TODAS AS MUDANCAS
+   git add .
+
+6. FAZER COMMIT DA DESABILITACAO
+   git commit -m "fix: Desabilitar GitHub Actions definitivamente
+
+   - Criado disabled.yml para substituir deploy.yml
+   - Workflow problemático removido
+   - GitHub Actions nao sera mais executado
+   - Deploy via Netlify mantido
+
+   Problema resolvido:
+   - Workflow deploy.yml removido
+   - GitHub Actions desabilitado
+   - Erro 403 nao vai mais aparecer
+   - Deploy via Netlify continua funcionando
+   - Emails de erro nao serao mais enviados"
+
+7. FAZER PUSH PARA GITHUB
+   git push origin main
+
+========================================
+ALTERNATIVA: REMOVER VIA GITHUB WEB
+========================================
+Se os comandos nao funcionarem:
+
+1. Acesse: https://github.com/Sicosikko/layane-spindola-site
+2. Vá para a pasta .github/workflows/
+3. Clique em deploy.yml
+4. Clique no lixeira (Delete file)
+5. Digite "Remove GitHub Actions workflow"
+6. Clique em "Commit changes"
+
+========================================
+VERIFICACAO
+========================================
+Apos executar:
+
+1. Aguarde 2-3 minutos
+2. Verifique se o erro parou de aparecer
+3. Confirme que o Netlify continua funcionando
+4. Teste o site normalmente
+
+========================================
+O QUE SERA FEITO
+========================================
+✅ Workflow deploy.yml removido
+✅ Arquivo disabled.yml criado
+✅ GitHub Actions desabilitado
+✅ Commit enviado para GitHub
+✅ Erro 403 nao vai mais aparecer
+
+========================================
+RESULTADO ESPERADO
+========================================
+- GitHub Actions desabilitado completamente
+- Erro 403 resolvido
+- Deploy via Netlify mantido
+- Site funcionando perfeitamente
+- Sem emails de erro
+- Workflow nao sera mais executado
+
+========================================
+IMPORTANTE
+========================================
+- O Netlify continuara funcionando normalmente
+- Apenas o GitHub Actions sera desabilitado
+- Nao havera impacto no site
+- O deploy automatico via Netlify sera mantido
+- O erro 128 nao vai mais aparecer

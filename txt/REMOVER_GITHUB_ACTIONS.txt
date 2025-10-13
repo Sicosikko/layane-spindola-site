@@ -1,0 +1,109 @@
+REMOVER GITHUB ACTIONS DESNECESSARIO
+
+========================================
+PROBLEMA IDENTIFICADO
+========================================
+- GitHub Actions tentando fazer deploy para GitHub Pages
+- Erro 403: Permission denied to github-actions[bot]
+- Workflow desnecessario pois estamos usando Netlify
+- Causa emails de erro desnecessarios
+
+========================================
+SOLUCAO: REMOVER WORKFLOW
+========================================
+
+OPCAO 1: SCRIPT AUTOMATICO
+- Execute: bat\remove-github-actions.bat
+
+OPCAO 2: COMANDOS MANUAIS
+
+1. ABRIR TERMINAL (CMD)
+   - Pressione Windows + R
+   - Digite: cmd
+   - Pressione Enter
+
+2. NAVEGAR ATE A PASTA
+   cd "C:\Users\gleis\OneDrive\Documentos\Projetos freelas\Layane\Site Layane"
+
+3. REMOVER ARQUIVOS DO GITHUB ACTIONS
+   del ".github\workflows\deploy.yml"
+   rmdir ".github\workflows"
+   rmdir ".github"
+
+4. FAZER COMMIT DA REMOCAO
+   git add .
+   git commit -m "fix: Remover GitHub Actions desnecessario
+
+   - Removido workflow deploy.yml que causava erro 403
+   - GitHub Actions tentava fazer deploy para GitHub Pages
+   - Como estamos usando Netlify, o workflow e desnecessario
+   - Evita erro de permissao do github-actions[bot]
+   - Deploy continua funcionando via Netlify
+
+   Problema resolvido:
+   - Erro 403 do github-actions[bot]
+   - Workflow desnecessario removido
+   - Deploy via Netlify mantido"
+
+5. FAZER PUSH
+   git push origin main
+
+========================================
+O QUE SERA REMOVIDO
+========================================
+📁 .github/
+  └── 📁 workflows/
+      └── deploy.yml (workflow que causa erro)
+
+========================================
+RESULTADO ESPERADO
+========================================
+✅ Erro 403 nao vai mais aparecer
+✅ Emails de erro nao serao mais enviados
+✅ Deploy via Netlify continua funcionando
+✅ Site carrega normalmente
+✅ Nenhum impacto no funcionamento
+
+========================================
+POR QUE REMOVER?
+========================================
+1. Estamos usando Netlify para deploy
+2. GitHub Actions e desnecessario
+3. Causa erro de permissao (403)
+4. Envia emails de erro desnecessarios
+5. Pode confundir sobre qual deploy usar
+
+========================================
+ALTERNATIVA (SE QUISER MANTER)
+========================================
+Se quiser manter o GitHub Actions:
+
+1. Acesse: https://github.com/Sicosikko/layane-spindola-site/settings/actions
+2. Vá em "Workflow permissions"
+3. Selecione "Read and write permissions"
+4. Salve as configurações
+
+Mas recomendamos remover pois:
+- Netlify ja faz o deploy automaticamente
+- GitHub Actions e redundante
+- Pode causar conflitos
+
+========================================
+VERIFICACAO
+========================================
+Apos remover:
+
+1. Verifique se a pasta .github foi removida
+2. Faça um novo commit
+3. Verifique se o erro parou de aparecer
+4. Confirme que o Netlify continua funcionando
+5. Teste o site normalmente
+
+========================================
+RESULTADO FINAL
+========================================
+- GitHub Actions removido
+- Erro 403 resolvido
+- Deploy via Netlify mantido
+- Site funcionando perfeitamente
+- Sem emails de erro
