@@ -885,8 +885,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero {
-        padding-top: 100px; /* Ajustar para tablet */
-        padding-bottom: 4rem;
+        padding-top: 140px; /* Ajustar para tablet */
+        padding-bottom: 5rem;
         min-height: calc(100vh - 70px);
     }
 
@@ -952,8 +952,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero {
-        padding-top: 90px; /* Ajustar para telas muito pequenas */
-        padding-bottom: 3rem;
+        padding-top: 130px; /* Ajustar para telas muito pequenas */
+        padding-bottom: 4rem;
         min-height: calc(100vh - 60px);
     }
 
