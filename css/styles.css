@@ -80,17 +80,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline {
+    background: transparent;
+    color: #2c5530;
+    border: 2px solid #2c5530;
+    backdrop-filter: none;
+}
+
+.btn-outline:hover {
+    background: #2c5530;
+    color: white;
+    border-color: #2c5530;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.3);
+}
+
+/* Botão outline em fundo escuro (hero) */
+.hero .btn-outline,
+.ebook .btn-outline {
     background: rgba(255, 255, 255, 0.1);
     color: white;
     border-color: white;
     backdrop-filter: blur(10px);
 }
 
-.btn-outline:hover {
+.hero .btn-outline:hover,
+.ebook .btn-outline:hover {
     background: rgba(255, 255, 255, 0.2);
     color: white;
     border-color: white;
-    transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
 
@@ -580,9 +597,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .produtos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centralizar o quarto item - posiciona abaixo do segundo */
+.produtos-grid .produto-card:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2;
 }
 
 .produto-card {
@@ -896,9 +922,16 @@ h1, h2, h3, h4, h5, h6 {
 
     .testemunhos-slider,
     .testemunhos-grid,
-    .cursos-grid,
+    .cursos-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .produtos-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .produtos-grid .produto-card:nth-child(4) {
+        grid-column: 1;
     }
 
     .footer-bottom {
