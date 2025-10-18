@@ -248,63 +248,63 @@ function initScrollToTop() {
 // Mobile menu functionality
 function initMobileMenu() {
     const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const sidebarMenu = document.getElementById('sidebar-menu');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
     
-    if (navToggle && navMenu) {
+    if (navToggle && sidebarMenu && sidebarOverlay) {
+        // Abrir menu ao clicar no hamburger
         navToggle.addEventListener('click', function(e) {
-            e.stopPropagation(); // Evitar fechar imediatamente
-            navMenu.classList.toggle('active');
+            e.stopPropagation();
+            sidebarMenu.classList.add('active');
+            sidebarOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Evitar scroll
             
-            // Animate hamburger icon
+            // Animate hamburger to X
             const bars = navToggle.querySelectorAll('.bar');
-            bars.forEach((bar, index) => {
-                if (navMenu.classList.contains('active')) {
-                    if (index === 0) bar.style.transform = 'rotate(45deg) translate(5px, 5px)';
-                    if (index === 1) bar.style.opacity = '0';
-                    if (index === 2) bar.style.transform = 'rotate(-45deg) translate(7px, -6px)';
-                } else {
-                    bar.style.transform = 'none';
-                    bar.style.opacity = '1';
-                }
-            });
+            bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+            bars[1].style.opacity = '0';
+            bars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
         });
         
-        // Close menu when clicking on a link
-        const navLinks = navMenu.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
+        // Fechar menu ao clicar no overlay
+        sidebarOverlay.addEventListener('click', function() {
+            closeSidebarMenu();
+        });
+        
+        // Fechar menu ao clicar em um link
+        const sidebarLinks = sidebarMenu.querySelectorAll('.nav-link');
+        sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {
-                closeMobileMenu();
+                closeSidebarMenu();
             });
         });
         
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-                closeMobileMenu();
-            }
-        });
-        
-        // Close menu on escape key
+        // Fechar menu com tecla Escape
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                closeMobileMenu();
+            if (e.key === 'Escape' && sidebarMenu.classList.contains('active')) {
+                closeSidebarMenu();
             }
         });
         
-        // Close menu on window resize (desktop)
+        // Fechar menu ao redimensionar para desktop
         window.addEventListener('resize', function() {
-            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
-                closeMobileMenu();
+            if (window.innerWidth > 768 && sidebarMenu.classList.contains('active')) {
+                closeSidebarMenu();
             }
         });
     }
     
-    function closeMobileMenu() {
-        const navMenu = document.getElementById('nav-menu');
+    function closeSidebarMenu() {
+        const sidebarMenu = document.getElementById('sidebar-menu');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
         const navToggle = document.getElementById('nav-toggle');
         
-        if (navMenu && navToggle) {
-            navMenu.classList.remove('active');
+        if (sidebarMenu && sidebarOverlay && navToggle) {
+            sidebarMenu.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restaurar scroll
+            
+            // Reset hamburger icon
             const bars = navToggle.querySelectorAll('.bar');
             bars.forEach(bar => {
                 bar.style.transform = 'none';
@@ -435,3 +435,4 @@ console.log(`
 Desenvolvido com carinho para promover saúde natural e bem-estar.
 Para suporte técnico, entre em contato através do site.
 `);
+
