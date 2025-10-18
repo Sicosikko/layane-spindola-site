@@ -306,12 +306,34 @@ h1, h2, h3, h4, h5, h6 {
     right: -100%;
     width: 280px;
     height: 100vh;
+    max-height: 100vh;
     background: white;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 1000;
-    overflow-y: auto;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
     padding: 80px 0 2rem 0;
+}
+
+/* Estilizar a barra de rolagem do sidebar */
+.nav-menu.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.nav-menu.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.nav-menu.sidebar::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 4px;
+}
+
+.nav-menu.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #b8941e;
 }
 
 .nav-menu.sidebar.active {

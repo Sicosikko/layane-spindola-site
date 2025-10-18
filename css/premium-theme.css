@@ -457,11 +457,33 @@ body {
     
     .nav-menu.sidebar {
         display: none;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
     }
     
     .nav-menu.sidebar.active {
         display: flex !important;
         flex-direction: column;
+        overflow-y: scroll !important;
+    }
+    
+    /* Barra de rolagem estilizada para mobile */
+    .nav-menu.sidebar::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .nav-menu.sidebar::-webkit-scrollbar-track {
+        background: #f8f8f8;
+    }
+    
+    .nav-menu.sidebar::-webkit-scrollbar-thumb {
+        background: var(--primary-gold);
+        border-radius: 3px;
+    }
+    
+    .nav-menu.sidebar::-webkit-scrollbar-thumb:hover {
+        background: var(--gold-dark);
     }
     
     .section-title {
