@@ -817,5 +817,38 @@ body {
     .sobre-photo img {
         max-height: 350px;
     }
+    
+    .produtos-cursos {
+        padding: 2.5rem 0;
+    }
+    
+    .produtos-cursos .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .produto-card {
+        padding: 1rem;
+    }
+    
+    .produto-image {
+        margin-bottom: 0.7rem;
+        border-radius: 8px;
+    }
+    
+    .produto-titulo {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .produto-descricao {
+        font-size: 0.8rem;
+        margin-bottom: 0.7rem;
+    }
+    
+    .produto-card .btn {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
 }
 
