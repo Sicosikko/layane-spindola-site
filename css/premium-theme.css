@@ -162,6 +162,24 @@ body {
     overflow: hidden;
 }
 
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text {
+    grid-column: 1;
+}
+
+.hero-image {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-photo {
     position: relative;
     width: 100%;
@@ -546,6 +564,24 @@ body {
         font-size: 2.2rem;
     }
     
+    .hero .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero-text {
+        grid-column: 1;
+        text-align: center;
+    }
+    
+    .hero-image {
+        grid-column: 1;
+    }
+    
+    .hero-photo {
+        max-width: 350px;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
     }
@@ -553,6 +589,10 @@ body {
     .btn {
         padding: 15px 30px;
         font-size: 0.9rem;
+    }
+    
+    .hero-cta {
+        justify-content: center;
     }
 }
 
