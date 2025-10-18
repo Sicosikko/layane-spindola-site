@@ -911,8 +911,12 @@ h1, h2, h3, h4, h5, h6 {
         display: flex !important;
     }
 
-    /* Sidebar Menu Styles */
+    /* Sidebar Menu Styles - Apenas quando ativo */
     .nav-menu.sidebar {
+        display: none;
+    }
+    
+    .nav-menu.sidebar.active {
         display: flex;
         flex-direction: column;
     }

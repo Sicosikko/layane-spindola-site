@@ -456,7 +456,12 @@ body {
     }
     
     .nav-menu.sidebar {
+        display: none;
+    }
+    
+    .nav-menu.sidebar.active {
         display: flex !important;
+        flex-direction: column;
     }
     
     .section-title {
