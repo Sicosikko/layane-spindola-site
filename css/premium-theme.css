@@ -437,6 +437,28 @@ body {
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
+    /* Esconder elementos do header desktop */
+    .nav-menu:not(.sidebar) {
+        display: none !important;
+    }
+    
+    .header .nav-cta {
+        display: none !important;
+    }
+    
+    /* Garantir que sidebar apareça corretamente */
+    .sidebar-overlay {
+        display: none;
+    }
+    
+    .sidebar-overlay.active {
+        display: block !important;
+    }
+    
+    .nav-menu.sidebar {
+        display: flex !important;
+    }
+    
     .section-title {
         font-size: 2.2rem;
     }

@@ -898,12 +898,17 @@ h1, h2, h3, h4, h5, h6 {
 
     /* Esconder menu desktop */
     .nav-menu {
-        display: none;
+        display: none !important;
+    }
+
+    /* Esconder CTA do header em mobile */
+    .nav-cta {
+        display: none !important;
     }
 
     /* Mostrar botão hamburger */
     .nav-toggle {
-        display: flex;
+        display: flex !important;
     }
 
     /* Sidebar Menu Styles */
