@@ -1003,9 +1003,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero {
-        padding-top: 90px; /* Ajustar para tablet */
+        padding-top: 100px; /* Ajustar para tablet */
         padding-bottom: 3rem;
-        min-height: calc(100vh - 70px);
+        min-height: auto;
+        max-height: none;
     }
 
     .hero .container {
@@ -1070,13 +1071,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero {
-        padding-top: 85px; /* Ajustar para telas muito pequenas */
-        padding-bottom: 2.5rem;
-        min-height: calc(100vh - 60px);
+        padding-top: 90px; /* Ajustar para telas muito pequenas */
+        padding-bottom: 2rem;
+        min-height: auto;
+        max-height: none;
     }
 
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         line-height: 1.4;
     }
     

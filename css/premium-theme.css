@@ -569,6 +569,13 @@ body {
         font-size: 2.2rem;
     }
     
+    .hero {
+        min-height: auto;
+        max-height: none;
+        padding-top: 100px;
+        padding-bottom: 3rem;
+    }
+    
     .hero .container {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -577,42 +584,98 @@ body {
     .hero-text {
         grid-column: 1;
         text-align: center;
+        order: 1;
     }
     
     .hero-image {
         grid-column: 1;
+        order: 2;
     }
     
     .hero-photo {
-        max-width: 350px;
+        max-width: 320px;
+    }
+    
+    .hero-photo img {
+        max-height: 400px;
     }
     
     .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .btn {
-        padding: 15px 30px;
-        font-size: 0.9rem;
-    }
-    
-    .hero-cta {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-title {
         font-size: 1.8rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
     }
     
-    .hero-title {
-        font-size: 2rem;
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
     }
     
     .btn {
         padding: 12px 25px;
         font-size: 0.85rem;
+    }
+    
+    .btn-large {
+        padding: 12px 28px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-cta {
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 90px;
+        padding-bottom: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1.2rem;
+    }
+    
+    .hero-photo {
+        max-width: 280px;
+    }
+    
+    .hero-photo img {
+        max-height: 350px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 11px 22px;
+        font-size: 0.8rem;
+    }
+    
+    .btn-large {
+        padding: 11px 24px;
+        font-size: 0.85rem;
+    }
+    
+    .hero-cta .btn {
+        max-width: 260px;
     }
 }
 
