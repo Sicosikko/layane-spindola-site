@@ -175,10 +175,10 @@ section {
 
 .curso-hero {
     background: linear-gradient(135deg, #1a4d2e 0%, #2c5530 50%, #4f772d 100%);
-    padding: 140px 0 100px;
+    padding: 140px 0 80px;
     position: relative;
     overflow: hidden;
-    min-height: 90vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
 }
