@@ -372,7 +372,7 @@ section {
    ============================================ */
 
 .sobre-layane {
-    padding: 100px 0;
+    padding: 80px 0;
     background: #fff;
 }
 
@@ -488,7 +488,7 @@ section {
    ============================================ */
 
 .curso-sessoes {
-    padding: 100px 0;
+    padding: 80px 0;
     background: #fff;
 }
 
@@ -603,7 +603,7 @@ section {
    ============================================ */
 
 .guia-doencas {
-    padding: 100px 0;
+    padding: 80px 0;
     background: linear-gradient(to bottom, #f8f9fa 0%, #fff 100%);
 }
 
@@ -691,7 +691,7 @@ section {
    ============================================ */
 
 .curso-conteudo {
-    padding: 100px 0;
+    padding: 80px 0;
     background: #fff;
 }
 
@@ -773,7 +773,7 @@ section {
    ============================================ */
 
 .acesso-imediato {
-    padding: 100px 0;
+    padding: 80px 0;
     background: linear-gradient(135deg, #1a4d2e 0%, #2c5530 100%);
     color: #fff;
     position: relative;
@@ -888,7 +888,7 @@ section {
    ============================================ */
 
 .curso-cta-final {
-    padding: 120px 0;
+    padding: 80px 0;
     background: linear-gradient(to bottom, #f8f9fa 0%, #fff 100%);
     position: relative;
     overflow: hidden;
@@ -1236,7 +1236,7 @@ section {
 
 /* Seção da Solução */
 .curso-solucao {
-    padding: 100px 0;
+    padding: 80px 0;
     background: linear-gradient(to bottom, #fff 0%, #f8f9fa 100%);
 }
 
@@ -1318,7 +1318,7 @@ section {
 
 /* Prova Social */
 .prova-social {
-    padding: 100px 0;
+    padding: 80px 0;
     background: #fff;
 }
 
@@ -1468,7 +1468,7 @@ section {
 
 /* FAQ Section */
 .faq-section {
-    padding: 100px 0;
+    padding: 80px 0;
     background: linear-gradient(to bottom, #f8f9fa 0%, #fff 100%);
 }
 
