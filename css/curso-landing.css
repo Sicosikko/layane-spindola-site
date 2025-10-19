@@ -175,10 +175,10 @@ section {
 
 .curso-hero {
     background: linear-gradient(135deg, #1a4d2e 0%, #2c5530 50%, #4f772d 100%);
-    padding: 120px 0 60px;
+    padding: 100px 0 40px;
     position: relative;
     overflow: hidden;
-    min-height: 90vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
 }
@@ -210,35 +210,35 @@ section {
     display: inline-block;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    padding: 6px 16px;
-    border-radius: 30px;
-    margin-bottom: 16px;
+    padding: 10px 28px;
+    border-radius: 50px;
+    margin-bottom: 28px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .curso-hero-badge span {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 
 .curso-hero-title {
-    font-size: 2.2rem;
+    font-size: 3.8rem;
     font-weight: 800;
     color: #fff;
-    line-height: 1.2;
-    margin-bottom: 16px;
+    line-height: 1.15;
+    margin-bottom: 28px;
     font-family: 'Playfair Display', serif;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
 .curso-hero-subtitle {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 20px;
-    line-height: 1.6;
+    margin-bottom: 40px;
+    line-height: 1.8;
     font-weight: 400;
 }
 
@@ -251,15 +251,15 @@ section {
 .curso-hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 20px;
+    gap: 24px;
+    margin-bottom: 40px;
 }
 
 .stat-item {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 12px 10px;
-    border-radius: 12px;
+    padding: 24px 20px;
+    border-radius: 16px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.3s ease;
@@ -272,9 +272,9 @@ section {
 }
 
 .stat-icon {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     color: #fff;
 }
 
@@ -284,11 +284,11 @@ section {
 }
 
 .stat-number {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 800;
     color: #fff !important;
     display: block !important;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-family: 'Playfair Display', serif;
     opacity: 1 !important;
     visibility: visible !important;
@@ -305,7 +305,7 @@ section {
 }
 
 .stat-label {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
 }
@@ -320,15 +320,15 @@ section {
 
 .stat-logo-wrapper {
     width: 100%;
-    max-width: 80px;
-    height: 50px;
+    max-width: 120px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 8px;
-    padding: 6px;
+    border-radius: 12px;
+    padding: 12px;
 }
 
 .abrath-logo {
