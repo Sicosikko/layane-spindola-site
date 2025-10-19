@@ -286,10 +286,12 @@ section {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #fff;
+    color: #fff !important;
     display: block;
     margin-bottom: 8px;
     font-family: 'Playfair Display', serif;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .stat-label {
@@ -353,6 +355,122 @@ section {
     height: 200%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
     animation: float 8s ease-in-out infinite;
+}
+
+/* ============================================
+   QUEM SOU EU - LAYANE SPINDOLA
+   ============================================ */
+
+.sobre-layane {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.sobre-layane-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.sobre-layane-image {
+    position: relative;
+}
+
+.image-frame-sobre {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.image-frame-sobre img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+}
+
+.sobre-layane-text .section-title {
+    text-align: left;
+    margin-bottom: 28px;
+    font-size: 2.2rem;
+}
+
+.sobre-layane-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.sobre-layane-credentials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+}
+
+.credential-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #f8f9fa, #fff);
+    border-radius: 12px;
+    border-left: 4px solid #4f772d;
+    transition: all 0.3s ease;
+}
+
+.credential-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.credential-item i {
+    font-size: 1.5rem;
+    color: #4a7c59;
+}
+
+.credential-item span {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.sobre-layane-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.stat-box-sobre {
+    background: linear-gradient(135deg, #4f772d, #2c5530);
+    padding: 32px 24px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(79, 119, 45, 0.3);
+    transition: all 0.3s ease;
+}
+
+.stat-box-sobre:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(79, 119, 45, 0.4);
+}
+
+.stat-number-sobre {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 8px;
+}
+
+.stat-label-sobre {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
 }
 
 /* ============================================
@@ -932,6 +1050,25 @@ section {
         font-size: 2rem;
     }
     
+    .sobre-layane-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .sobre-layane-text .section-title {
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .sobre-layane-credentials {
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre-layane-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
     .sessoes-grid {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -1004,12 +1141,30 @@ section {
     .guia-doencas,
     .curso-conteudo,
     .acesso-imediato,
-    .curso-cta-final {
+    .curso-cta-final,
+    .sobre-layane {
         padding: 60px 0;
     }
     
     .section-subtitle {
         font-size: 1rem;
+    }
+    
+    .sobre-layane-text .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .sobre-layane-description {
+        font-size: 1rem;
+    }
+    
+    .sobre-layane-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .stat-number-sobre {
+        font-size: 2.2rem;
     }
     
     .sessao-card {

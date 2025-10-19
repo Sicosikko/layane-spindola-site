@@ -194,6 +194,58 @@
         </div>
     </section>
 
+    <!-- Quem Sou Eu -->
+    <section class="sobre-layane">
+        <div class="container">
+            <div class="sobre-layane-content">
+                <div class="sobre-layane-image animate-on-scroll">
+                    <div class="image-frame-sobre">
+                        <img src="https://i.postimg.cc/L47tdbQc/Naturopatia-Pr-tica-2.png" alt="Layane Spindola - Terapeuta Naturalista" loading="lazy">
+                    </div>
+                </div>
+                <div class="sobre-layane-text animate-on-scroll">
+                    <h2 class="section-title">Quem sou eu, de verdade? Layane Spindola, a profissional que te guia pro equilíbrio sem complicação.</h2>
+                    <p class="sobre-layane-description">
+                        Layane Spindola é terapeuta naturalista, especialista em nutrição e gastronomia, além de mestre em nutrição vegetariana. Com quase uma década de experiência, ela se consolidou como uma referência no segmento. Sua trajetória começou como palestrante e terapeuta, e rapidamente se destacou por sua agenda sempre lotada e pelos resultados transformadores que proporcionou a seus clientes.
+                    </p>
+                    <p class="sobre-layane-description">
+                        Ao longo de sua carreira, já impactou mais de 10 mil pessoas em atendimentos individuais e realizou mais de 4 mil palestras, tanto no Brasil quanto no exterior. Reconhecida pelo público e pela mídia, Layane é uma autoridade em terapias naturalistas, com participações em programas de rádio e TV, além de conteúdos criativos que engajam milhares de seguidores nas redes sociais.
+                    </p>
+                    
+                    <div class="sobre-layane-credentials">
+                        <div class="credential-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Terapeuta naturalista</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-apple-alt"></i>
+                            <span>Especialista em Nutrição</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Especialista em Gastronomia</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Mestre em Nutrição Vegetariana</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sobre-layane-stats">
+                        <div class="stat-box-sobre">
+                            <div class="stat-number-sobre">10.000+</div>
+                            <div class="stat-label-sobre">Pessoas Impactadas</div>
+                        </div>
+                        <div class="stat-box-sobre">
+                            <div class="stat-number-sobre">4.000+</div>
+                            <div class="stat-label-sobre">Palestras Realizadas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Sessões do Curso -->
     <section class="curso-sessoes">
         <div class="container">
@@ -395,8 +447,8 @@
                 <div class="conteudo-item animate-on-scroll" style="animation-delay: 0.5s">
                     <div class="conteudo-icon"><i class="fas fa-video"></i></div>
                     <div>
-                        <h4><strong>Aulas e mentorias ao vivo</strong></h4>
-                        <p>Com agenda programada, pra tirar dúvidas e trocar experiências comigo.</p>
+                        <h4><strong>Aulas gravadas em vídeo</strong></h4>
+                        <p>Assista quantas vezes quiser, no seu ritmo, sem pressa.</p>
                     </div>
                 </div>
                 
@@ -426,7 +478,7 @@
                 <div class="acesso-text animate-on-scroll">
                     <h2 class="section-title">Acesso imediato ao curso, viu?</h2>
                     <p class="acesso-desc">
-                        Assim que você se inscrever, já entra direto na plataforma. Contato de suporte ao aluno, aulas e mentorias ao vivo conforme agenda programática. Nada de espera, é começar já!
+                        Assim que você se inscrever, já entra direto na plataforma. Todas as aulas gravadas disponíveis pra você assistir quando quiser, no seu tempo. Nada de espera, é começar já!
                     </p>
                     <ul class="acesso-lista">
                         <li>✅ Acesso vitalício à plataforma</li>
@@ -624,11 +676,11 @@
                 
                 <div class="faq-item animate-on-scroll" style="animation-delay: 0.3s">
                     <div class="faq-pergunta">
-                        <h4>E as aulas ao vivo?</h4>
+                        <h4>As aulas são gravadas ou ao vivo?</h4>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-resposta">
-                        <p>São 17 sessões programadas com agenda que você recebe ao se inscrever. Se perder alguma, tem gravação + replay ilimitado pra assistir quando quiser.</p>
+                        <p>Todas as aulas são gravadas! Você assiste quando quiser, quantas vezes precisar, no seu ritmo. Sem pressa, sem perder nada.</p>
                     </div>
                 </div>
                 
@@ -749,7 +801,42 @@
             observer.observe(el);
         });
 
-        // Contador animado desabilitado - números já estão fixos no HTML
+        // Contador animado para os stats
+        const animateCounter = (element, target) => {
+            let current = 0;
+            const increment = target / 60;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        };
+
+        // Observar stats para animar quando visíveis
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    if (statNumber && !statNumber.classList.contains('animated')) {
+                        statNumber.classList.add('animated');
+                        const targetNumber = parseInt(statNumber.textContent);
+                        if (!isNaN(targetNumber) && targetNumber > 0) {
+                            statNumber.textContent = '0';
+                            animateCounter(statNumber, targetNumber);
+                        }
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observar apenas os stat-items que têm números (não o logo)
+        document.querySelectorAll('.stat-item:not(.stat-logo)').forEach(el => {
+            statsObserver.observe(el);
+        });
 
         // Parallax suave no scroll
         window.addEventListener('scroll', () => {
