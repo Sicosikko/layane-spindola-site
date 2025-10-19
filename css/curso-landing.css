@@ -271,6 +271,18 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+.stat-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.stat-icon i {
+    display: block;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
 .stat-number {
     font-size: 2.5rem;
     font-weight: 800;
@@ -284,6 +296,34 @@ section {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
+}
+
+/* Logo ABRATH */
+.stat-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-logo-wrapper {
+    width: 100%;
+    max-width: 120px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.abrath-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 /* Hero Image */
@@ -372,6 +412,11 @@ section {
     font-size: 4rem;
     display: inline-block;
     transition: transform 0.4s ease;
+    color: #4a7c59;
+}
+
+.sessao-icon i {
+    display: block;
 }
 
 .sessao-card:hover .sessao-icon {
@@ -567,10 +612,19 @@ section {
     font-size: 2rem;
     flex-shrink: 0;
     transition: transform 0.4s ease;
+    color: #4a7c59;
+}
+
+.conteudo-icon i {
+    display: block;
 }
 
 .conteudo-item:hover .conteudo-icon {
     transform: scale(1.2) rotate(10deg);
+}
+
+.conteudo-item:hover .conteudo-icon i {
+    color: #4f772d;
 }
 
 .conteudo-item h4 {
@@ -831,6 +885,11 @@ section {
 
 .garantia-icon {
     font-size: 1.5rem;
+    color: #4a7c59;
+}
+
+.garantia-icon i {
+    display: block;
 }
 
 .cta-final-obs {
@@ -1063,10 +1122,19 @@ section {
     font-size: 3rem;
     flex-shrink: 0;
     transition: transform 0.4s ease;
+    color: #4a7c59;
+}
+
+.beneficio-icon i {
+    display: block;
 }
 
 .beneficio-item:hover .beneficio-icon {
     transform: scale(1.2) rotate(10deg);
+}
+
+.beneficio-item:hover .beneficio-icon i {
+    color: #4f772d;
 }
 
 .beneficio-content h4 {
@@ -1214,6 +1282,11 @@ section {
 
 .garantia-box .garantia-icon {
     font-size: 3rem;
+    color: #4f772d;
+}
+
+.garantia-box .garantia-icon i {
+    display: block;
 }
 
 .garantia-box .garantia-text {
