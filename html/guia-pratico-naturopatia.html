@@ -9,58 +9,92 @@
     <link rel="stylesheet" href="../css/premium-theme.css">
     <link rel="stylesheet" href="../css/curso-landing.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="nav-logo">
-                <h2>Layane Spindola</h2>
-            </div>
-            
-            <!-- Desktop Menu -->
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="../index.html#sobre" class="nav-link">Sobre Mim</a></li>
-                <li class="nav-item dropdown">
-                    <a href="../index.html#cursos" class="nav-link">Cursos & Programas</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="terapeuta-alta-performance.html">Terapeuta de Alta Performance</a></li>
-                        <li><a href="guia-pratico-naturopatia.html">Guia Prático de Naturopatia</a></li>
-                        <li><a href="programa-aceleracao-agape.html">Programa de Aceleração Ágape</a></li>
-                        <li><a href="protocolos-terapeuticos.html">Protocolos Terapêuticos</a></li>
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Layane Spindola</h2>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html#sobre" class="nav-link">Sobre Mim</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="../index.html#cursos" class="nav-link">Cursos & Programas <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="terapeuta-alta-performance.html">Terapeuta de Alta Performance</a></li>
+                                <li><a href="guia-pratico-naturopatia.html">Guia Prático de Naturopatia</a></li>
+                                <li><a href="programa-aceleracao-agape.html">Programa de Aceleração Ágape</a></li>
+                                <li><a href="protocolos-terapeuticos.html">Protocolos Terapêuticos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html#testemunhos" class="nav-link">Testemunhos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html#contato" class="nav-link">Contato</a>
+                        </li>
                     </ul>
-                </li>
-                <li class="nav-item"><a href="../index.html#testemunhos" class="nav-link">Testemunhos</a></li>
-                <li class="nav-item"><a href="../index.html#contato" class="nav-link">Contato</a></li>
-            </ul>
-            
-            <div class="nav-cta">
-                <a href="../index.html#ebook" class="btn btn-small">Pega Seu Ebook de Graça</a>
+                </div>
+                
+                <div class="nav-cta">
+                    <a href="../index.html#ebook" class="btn btn-primary">Pega Seu Ebook de Graça</a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-            
-            <!-- Mobile Menu Toggle -->
-            <button class="nav-toggle" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </nav>
-        
-        <!-- Sidebar Menu (Mobile/Tablet) -->
-        <div class="sidebar-overlay"></div>
-        <ul class="nav-menu sidebar">
-            <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="../index.html#sobre" class="nav-link">Sobre Mim</a></li>
-            <li class="nav-item"><a href="terapeuta-alta-performance.html" class="nav-link">Terapeuta de Alta Performance</a></li>
-            <li class="nav-item"><a href="guia-pratico-naturopatia.html" class="nav-link">Guia Prático de Naturopatia</a></li>
-            <li class="nav-item"><a href="programa-aceleracao-agape.html" class="nav-link">Programa de Aceleração Ágape</a></li>
-            <li class="nav-item"><a href="protocolos-terapeuticos.html" class="nav-link">Protocolos Terapêuticos</a></li>
-            <li class="nav-item"><a href="../index.html#testemunhos" class="nav-link">Testemunhos</a></li>
-            <li class="nav-item"><a href="../index.html#contato" class="nav-link">Contato</a></li>
-            <li class="nav-item"><a href="../index.html#ebook" class="nav-link">Ebook Gratuito</a></li>
-        </ul>
     </header>
+
+    <!-- Sidebar Overlay (Mobile/Tablet) -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Sidebar Menu (Mobile/Tablet) -->
+    <div class="nav-menu sidebar" id="sidebar-menu">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="../index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="../index.html#sobre" class="nav-link">Sobre Mim</a>
+            </li>
+            <li class="nav-item">
+                <a href="terapeuta-alta-performance.html" class="nav-link">Terapeuta de Alta Performance</a>
+            </li>
+            <li class="nav-item">
+                <a href="guia-pratico-naturopatia.html" class="nav-link">Guia Prático de Naturopatia</a>
+            </li>
+            <li class="nav-item">
+                <a href="programa-aceleracao-agape.html" class="nav-link">Programa de Aceleração Ágape</a>
+            </li>
+            <li class="nav-item">
+                <a href="protocolos-terapeuticos.html" class="nav-link">Protocolos Terapêuticos</a>
+            </li>
+            <li class="nav-item">
+                <a href="../index.html#testemunhos" class="nav-link">Testemunhos</a>
+            </li>
+            <li class="nav-item">
+                <a href="../index.html#contato" class="nav-link">Contato</a>
+            </li>
+            <li class="nav-item nav-cta">
+                <a href="../index.html#ebook" class="btn btn-primary">Pega Seu Ebook de Graça</a>
+            </li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section class="curso-hero">
