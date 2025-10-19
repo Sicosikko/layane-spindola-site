@@ -801,20 +801,7 @@
             observer.observe(el);
         });
 
-        // Garantir que os números dos stats apareçam corretamente
-        document.querySelectorAll('.stat-number').forEach(statNumber => {
-            const dataNumber = statNumber.getAttribute('data-number');
-            if (dataNumber) {
-                // Forçar o número correto
-                statNumber.textContent = dataNumber;
-                statNumber.innerHTML = dataNumber;
-            }
-            // Forçar visibilidade dos números
-            statNumber.style.opacity = '1 !important';
-            statNumber.style.visibility = 'visible !important';
-            statNumber.style.display = 'block !important';
-            statNumber.style.color = '#fff !important';
-        });
+        // Números dos stats são fixos - sem animação
 
         // Parallax suave no scroll
         window.addEventListener('scroll', () => {

@@ -287,11 +287,21 @@ section {
     font-size: 2.5rem;
     font-weight: 800;
     color: #fff !important;
-    display: block;
+    display: block !important;
     margin-bottom: 8px;
     font-family: 'Playfair Display', serif;
     opacity: 1 !important;
     visibility: visible !important;
+    line-height: 1.2;
+}
+
+/* Garantir que o conteúdo do stat-number sempre apareça */
+.stat-number::before {
+    content: none !important;
+}
+
+.stat-number::after {
+    content: none !important;
 }
 
 .stat-label {
