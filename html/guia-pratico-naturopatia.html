@@ -124,12 +124,12 @@
                         </div>
                         <div class="stat-item">
                             <div class="stat-icon"><i class="fas fa-book-open"></i></div>
-                            <div class="stat-number">17</div>
+                            <div class="stat-number" data-number="17">17</div>
                             <div class="stat-label">Módulos Completos</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
-                            <div class="stat-number">85</div>
+                            <div class="stat-number" data-number="85">85</div>
                             <div class="stat-label">Aulas 100% EAD</div>
                         </div>
                     </div>
@@ -483,7 +483,7 @@
                     <ul class="acesso-lista">
                         <li>✅ Acesso vitalício à plataforma</li>
                         <li>✅ Atualizações gratuitas do conteúdo</li>
-                        <li>✅ Comunidade exclusiva de alunos</li>
+                        <li>✅ Suporte dedicado ao aluno</li>
                         <li>✅ Certificado digital e impresso</li>
                     </ul>
                     <a href="#inscricao" class="btn btn-large btn-primary">
@@ -801,41 +801,19 @@
             observer.observe(el);
         });
 
-        // Contador animado para os stats
-        const animateCounter = (element, target) => {
-            let current = 0;
-            const increment = target / 60;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target;
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current);
-                }
-            }, 16);
-        };
-
-        // Observar stats para animar quando visíveis
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumber = entry.target.querySelector('.stat-number');
-                    if (statNumber && !statNumber.classList.contains('animated')) {
-                        statNumber.classList.add('animated');
-                        const targetNumber = parseInt(statNumber.textContent);
-                        if (!isNaN(targetNumber) && targetNumber > 0) {
-                            statNumber.textContent = '0';
-                            animateCounter(statNumber, targetNumber);
-                        }
-                    }
-                }
-            });
-        }, { threshold: 0.5 });
-
-        // Observar apenas os stat-items que têm números (não o logo)
-        document.querySelectorAll('.stat-item:not(.stat-logo)').forEach(el => {
-            statsObserver.observe(el);
+        // Garantir que os números dos stats apareçam corretamente
+        document.querySelectorAll('.stat-number').forEach(statNumber => {
+            const dataNumber = statNumber.getAttribute('data-number');
+            if (dataNumber) {
+                // Forçar o número correto
+                statNumber.textContent = dataNumber;
+                statNumber.innerHTML = dataNumber;
+            }
+            // Forçar visibilidade dos números
+            statNumber.style.opacity = '1 !important';
+            statNumber.style.visibility = 'visible !important';
+            statNumber.style.display = 'block !important';
+            statNumber.style.color = '#fff !important';
         });
 
         // Parallax suave no scroll
@@ -849,28 +827,35 @@
             });
         });
 
-        // FAQ Accordion
-        document.querySelectorAll('.faq-item').forEach(item => {
-            const pergunta = item.querySelector('.faq-pergunta');
-            const resposta = item.querySelector('.faq-resposta');
-            const toggle = item.querySelector('.faq-toggle');
-            
-            pergunta.addEventListener('click', () => {
-                const isOpen = item.classList.contains('active');
+        // FAQ Accordion - Garantir funcionamento
+        setTimeout(() => {
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const pergunta = item.querySelector('.faq-pergunta');
+                const toggle = item.querySelector('.faq-toggle');
                 
-                // Fechar todos os outros
-                document.querySelectorAll('.faq-item').forEach(otherItem => {
-                    otherItem.classList.remove('active');
-                    otherItem.querySelector('.faq-toggle').textContent = '+';
-                });
-                
-                // Abrir/fechar o clicado
-                if (!isOpen) {
-                    item.classList.add('active');
-                    toggle.textContent = '−';
+                if (pergunta && toggle) {
+                    pergunta.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        const isOpen = item.classList.contains('active');
+                        
+                        // Fechar todos os outros
+                        document.querySelectorAll('.faq-item').forEach(otherItem => {
+                            otherItem.classList.remove('active');
+                            const otherToggle = otherItem.querySelector('.faq-toggle');
+                            if (otherToggle) otherToggle.textContent = '+';
+                        });
+                        
+                        // Abrir/fechar o clicado
+                        if (!isOpen) {
+                            item.classList.add('active');
+                            toggle.textContent = '−';
+                        }
+                    });
                 }
             });
-        });
+        }, 100);
     </script>
 </body>
 </html>
