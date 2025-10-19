@@ -211,35 +211,35 @@ section {
     display: inline-block;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    padding: 8px 20px;
-    border-radius: 40px;
-    margin-bottom: 20px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .curso-hero-badge span {
     color: #fff;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 
 .curso-hero-title {
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 800;
     color: #fff;
-    line-height: 1.15;
-    margin-bottom: 20px;
+    line-height: 1.1;
+    margin-bottom: 12px;
     font-family: 'Playfair Display', serif;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
 .curso-hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 24px;
-    line-height: 1.6;
+    margin-bottom: 16px;
+    line-height: 1.4;
     font-weight: 400;
 }
 
@@ -252,15 +252,15 @@ section {
 .curso-hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 8px;
+    margin-bottom: 16px;
 }
 
 .stat-item {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 16px 12px;
-    border-radius: 12px;
+    padding: 8px 6px;
+    border-radius: 8px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.3s ease;
@@ -273,9 +273,9 @@ section {
 }
 
 .stat-icon {
-    font-size: 2rem;
+    font-size: 1.2rem;
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
     color: #fff;
 }
 
@@ -285,11 +285,11 @@ section {
 }
 
 .stat-number {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 800;
     color: #fff !important;
     display: block !important;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
     font-family: 'Playfair Display', serif;
     opacity: 1 !important;
     visibility: visible !important;
@@ -306,7 +306,7 @@ section {
 }
 
 .stat-label {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
 }
@@ -321,15 +321,15 @@ section {
 
 .stat-logo-wrapper {
     width: 100%;
-    max-width: 90px;
-    height: 60px;
+    max-width: 60px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 10px;
-    padding: 8px;
+    border-radius: 6px;
+    padding: 4px;
 }
 
 .abrath-logo {
