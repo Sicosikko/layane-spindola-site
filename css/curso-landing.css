@@ -210,35 +210,35 @@ section {
     display: inline-block;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    padding: 10px 28px;
-    border-radius: 50px;
-    margin-bottom: 28px;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .curso-hero-badge span {
     color: #fff;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 
 .curso-hero-title {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: #fff;
     line-height: 1.2;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     font-family: 'Playfair Display', serif;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
 .curso-hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 32px;
-    line-height: 1.7;
+    margin-bottom: 20px;
+    line-height: 1.6;
     font-weight: 400;
 }
 
@@ -251,15 +251,15 @@ section {
 .curso-hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 32px;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 .stat-item {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 20px 16px;
-    border-radius: 16px;
+    padding: 12px 10px;
+    border-radius: 12px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.3s ease;
@@ -272,9 +272,9 @@ section {
 }
 
 .stat-icon {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     color: #fff;
 }
 
@@ -284,11 +284,11 @@ section {
 }
 
 .stat-number {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: #fff !important;
     display: block !important;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     font-family: 'Playfair Display', serif;
     opacity: 1 !important;
     visibility: visible !important;
@@ -305,7 +305,7 @@ section {
 }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
 }
@@ -320,15 +320,15 @@ section {
 
 .stat-logo-wrapper {
     width: 100%;
-    max-width: 120px;
-    height: 80px;
+    max-width: 80px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    padding: 12px;
+    border-radius: 8px;
+    padding: 6px;
 }
 
 .abrath-logo {
