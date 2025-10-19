@@ -4,6 +4,10 @@
    ============================================ */
 
 /* Reset e Correções */
+:root {
+    color-scheme: light only;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +18,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #ffffff;
     overflow-x: hidden;
+    color-scheme: light only;
 }
 
 section {
@@ -131,12 +137,24 @@ section {
 
 /* Animação ao scroll */
 .animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação ao scroll - versão alternativa com delay */
+.animate-on-scroll-delayed {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.animate-on-scroll.is-visible {
+.animate-on-scroll-delayed.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
