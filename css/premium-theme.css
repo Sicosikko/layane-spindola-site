@@ -276,7 +276,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     padding: 0.75rem 1.5rem;
     color: #333;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: background-color 0.3s ease;
 }
 
@@ -354,6 +354,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     position: relative;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .nav-link::after {
@@ -1067,6 +1068,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    text-decoration: none;
 }
 
 .social-link:hover {
