@@ -997,8 +997,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+
     .nav-container {
-        padding: 1rem 1.5rem;
+        padding: 0.8rem 1rem;
     }
 
     .nav-menu:not(.sidebar) {
@@ -1035,7 +1040,7 @@ h1, h2, h3, h4, h5, h6 {
         display: block;
         padding: 1.2rem 2rem;
         color: #333;
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-align: left;
     }
 
@@ -1053,58 +1058,194 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav-menu.sidebar .dropdown-menu a {
         padding: 1rem 3rem;
-        font-size: 1rem;
+        font-size: 0.95rem;
         border-bottom: 1px solid #e0e0e0;
     }
 
+    /* HERO MOBILE */
     .hero {
-        padding-top: 100px;
-        padding-bottom: 3rem;
+        padding: 90px 0 2rem;
         min-height: auto;
         max-height: none;
+        background-attachment: scroll;
     }
 
     .hero .container {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
+        padding: 0 20px;
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        hyphens: auto;
     }
 
     .hero-subtitle {
-        font-size: 1.15rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        word-wrap: break-word;
     }
 
     .hero-cta {
         justify-content: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 24px;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-photo {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .hero-photo img {
+        max-height: 350px;
+    }
+
+    /* SECTIONS MOBILE */
+    .sobre,
+    .educadora,
+    .produtos-cursos {
+        padding: 3rem 0;
     }
 
     .sobre-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
+    }
+
+    .sobre {
+        padding: 3rem 0;
+    }
+
+    .sobre-photo {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .sobre-text {
+        width: 100%;
+    }
+
+    .sobre-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left;
+        word-wrap: break-word;
+        margin-bottom: 2rem;
     }
 
     .sobre-credentials {
         grid-template-columns: 1fr;
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .credential-item {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .credential-item i {
+        font-size: 1.2rem;
     }
 
     .sobre-stats {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-item {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .sobre .btn {
+        width: 100%;
+        max-width: 320px;
+        display: block;
+        margin: 0 auto;
+        padding: 14px 24px;
+        font-size: 0.85rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+        word-wrap: break-word;
+        hyphens: auto;
+        padding: 0 10px;
+    }
+
+    .educadora {
+        padding: 3rem 0;
+    }
+
+    .educadora-content {
+        max-width: 100%;
+    }
+
+    .educadora-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: left;
+        word-wrap: break-word;
+        margin-bottom: 2rem;
+    }
+
+    .educadora .btn {
+        width: 100%;
+        max-width: 320px;
+        display: block;
+        margin: 0 auto;
+        padding: 14px 24px;
+        font-size: 0.85rem;
     }
 
     .produtos-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .produtos-grid .produto-card:nth-child(4) {
         grid-column: 1;
+    }
+
+    .produto-card {
+        padding: 1.5rem;
+    }
+
+    .produto-titulo {
+        font-size: 1.2rem;
+        word-wrap: break-word;
+    }
+
+    .produto-descricao {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .footer {
+        padding: 3rem 0 1.5rem;
     }
 
     .produtos-cursos {
@@ -1112,12 +1253,57 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .produtos-cursos .section-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin-bottom: 2rem;
     }
 
-    .produto-card {
-        padding: 1.2rem;
+    .produto-card .btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .produtos-cursos .text-center .btn {
+        width: 100%;
+        max-width: 320px;
+        padding: 14px 24px;
+        font-size: 0.85rem;
+    }
+
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-section ul {
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-section ul li a {
+        font-size: 0.95rem;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 
     .footer-bottom {
@@ -1125,47 +1311,164 @@ h1, h2, h3, h4, h5, h6 {
         gap: 1rem;
         text-align: center;
     }
+
+    .footer-bottom p {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
+        max-width: 100%;
     }
 
+    .nav-container {
+        padding: 0.6rem 1rem;
+    }
+
+    .nav-logo h2 {
+        font-size: 1.3rem;
+    }
+
+    /* HERO MOBILE SMALL */
     .hero {
-        padding-top: 90px;
-        padding-bottom: 2rem;
+        padding: 80px 0 1.5rem;
         min-height: auto;
         max-height: none;
     }
 
+    .hero .container {
+        padding: 0 15px;
+        gap: 1.5rem;
+    }
+
     .hero-title {
-        font-size: 1.6rem;
-        line-height: 1.4;
+        font-size: 1.5rem;
+        line-height: 1.25;
+        margin-bottom: 0.8rem;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: 2rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1.2rem;
     }
     
     .hero-cta {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         gap: 0.8rem;
     }
 
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 20px;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-photo {
+        max-width: 240px;
+    }
+
+    .hero-photo img {
+        max-height: 300px;
+    }
+
+    /* SECTIONS MOBILE SMALL */
+    .sobre,
+    .educadora,
+    .produtos-cursos {
+        padding: 2.5rem 0;
+    }
+
     .section-title {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
+        line-height: 1.3;
+        margin-bottom: 1.5rem;
+        padding: 0 5px;
+    }
+
+    .sobre-photo {
+        max-width: 240px;
+    }
+
+    .educadora {
+        padding: 2.5rem 0;
+    }
+
+    .educadora-description {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .educadora .btn {
+        max-width: 100%;
+        padding: 12px 20px;
+        font-size: 0.8rem;
+    }
+
+    .sobre {
+        padding: 2.5rem 0;
+    }
+
+    .sobre-photo {
+        max-width: 240px;
+    }
+
+    .sobre-description {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .credential-item {
+        font-size: 0.85rem;
+        padding: 0.7rem;
+    }
+
+    .credential-item i {
+        font-size: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    .sobre .btn {
+        max-width: 100%;
+        padding: 12px 20px;
+        font-size: 0.8rem;
     }
 
     .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        padding: 12px 20px;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
     }
 
     .btn-large {
-        padding: 12px 25px;
-        font-size: 1rem;
+        padding: 14px 24px;
+        font-size: 0.85rem;
+    }
+
+    .produto-card {
+        padding: 1.2rem;
+    }
+
+    .produto-titulo {
+        font-size: 1.1rem;
+    }
+
+    .produto-descricao {
+        font-size: 0.85rem;
+        line-height: 1.5;
     }
 
     .produtos-cursos {
@@ -1173,18 +1476,75 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .produtos-cursos .section-title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin-bottom: 1.5rem;
     }
 
     .produto-card {
         padding: 1rem;
     }
+
+    .produto-card .btn {
+        padding: 10px 18px;
+        font-size: 0.8rem;
+    }
+
+    .produtos-cursos .text-center .btn {
+        max-width: 100%;
+        padding: 12px 20px;
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        padding: 2.5rem 0 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-section ul li a {
+        font-size: 0.9rem;
+    }
+
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
 }
 
 /* Utility Classes */
 .text-center {
     text-align: center;
+}
+
+/* Previne scroll horizontal mobile */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    * {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 
