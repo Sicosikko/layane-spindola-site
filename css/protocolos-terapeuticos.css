@@ -1,0 +1,962 @@
+/* ============================================
+   PROTOCOLOS TERAPÊUTICOS - LANDING PAGE
+   CSS Dedicado - Padrão Site Principal
+   ============================================ */
+
+/* Reset e Variáveis */
+:root {
+    --primary-gold: #d4af37;
+    --gold-light: #f4e4b8;
+    --primary-black: #1a1a1a;
+    --green-dark: #1a4d2e;
+    --green-medium: #2c5530;
+    --green-light: #4f772d;
+    color-scheme: light only;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+    50% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-slide-down { animation: slideDown 0.8s ease-out forwards; }
+.animate-slide-up { animation: slideUp 0.8s ease-out forwards; animation-delay: 0.2s; opacity: 0; }
+.animate-fade-in { animation: fadeIn 1s ease-out forwards; animation-delay: 0.4s; opacity: 0; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-pulse { animation: pulse 2s ease-in-out infinite; }
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.produto-hero {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 50%, var(--green-light) 100%);
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    animation: backgroundMove 20s ease infinite;
+    background-size: 400% 400%;
+}
+
+.produto-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.produto-hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.produto-hero-badge span {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.produto-hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.produto-hero-title .highlight-gold {
+    background: linear-gradient(135deg, var(--primary-gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.produto-hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 30px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.produto-hero-subtitle strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Stats */
+.produto-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px 15px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-gold);
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+/* Hero Image */
+.produto-hero-image {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+}
+
+.image-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: float 8s ease-in-out infinite;
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-gold), #c9a227);
+    color: var(--primary-black);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+}
+
+.btn-large {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   SEÇÃO BENEFÍCIOS
+   ============================================ */
+
+.produto-beneficios {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold-light), var(--primary-gold), var(--gold-light));
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 30px auto 60px;
+    line-height: 1.8;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.beneficio-card {
+    background: linear-gradient(135deg, #f8f9fa, #fff);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #e8f5e9;
+    transition: all 0.4s ease;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(44, 85, 48, 0.15);
+    border-color: var(--green-light);
+}
+
+.beneficio-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--green-light), var(--green-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 2rem;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.beneficio-card:hover .beneficio-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.beneficio-card h3 {
+    font-size: 1.3rem;
+    color: var(--green-dark);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.beneficio-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ============================================
+   SEÇÃO PARA QUEM
+   ============================================ */
+
+.produto-para-quem {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.para-quem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 50px auto 0;
+}
+
+.para-quem-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 25px;
+    background: #fff;
+    border-radius: 12px;
+    border-left: 4px solid var(--green-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.para-quem-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.para-quem-item i {
+    font-size: 1.5rem;
+    color: var(--green-light);
+    flex-shrink: 0;
+}
+
+.para-quem-item span {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+
+.produto-cta-final {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #fff 0%, #f8f9fa 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(79, 119, 45, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(44, 85, 48, 0.03) 0%, transparent 50%);
+    animation: backgroundMove 20s ease infinite;
+    background-size: 400% 400%;
+}
+
+.cta-final-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--green-light), var(--green-dark));
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(79, 119, 45, 0.3);
+}
+
+.cta-final-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--green-dark);
+    margin-bottom: 20px;
+}
+
+.cta-final-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.cta-final-preco {
+    margin-bottom: 40px;
+}
+
+.preco-destaque {
+    background: linear-gradient(135deg, #f8f9fa, #fff);
+    border: 2px solid #e8f5e9;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    display: inline-block;
+}
+
+.preco-label {
+    display: block;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.preco-parcelado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.preco-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.preco-valor {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--green-light);
+    font-family: 'Playfair Display', serif;
+}
+
+.preco-vista {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.preco-vista strong {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--green-dark);
+}
+
+.cta-final-garantia {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.garantia-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.garantia-icon {
+    font-size: 1.3rem;
+    color: var(--green-light);
+}
+
+.cta-final-obs {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+}
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+
+.faq-section {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #fff 100%);
+}
+
+.faq-lista {
+    max-width: 800px;
+    margin: 50px auto 40px;
+}
+
+.faq-item {
+    background: #fff;
+    border: 2px solid #e8f5e9;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--green-light);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.faq-pergunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-pergunta h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--green-dark);
+    font-weight: 600;
+}
+
+.faq-toggle {
+    font-size: 1.8rem;
+    color: var(--green-light);
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-resposta {
+    max-height: 300px;
+    padding: 0 25px 22px;
+}
+
+.faq-resposta p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+.faq-contato {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    border-radius: 16px;
+}
+
+.faq-contato p {
+    margin: 8px 0;
+    font-size: 1.05rem;
+    color: var(--green-dark);
+}
+
+.faq-contato a {
+    color: var(--green-light);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.faq-contato a:hover {
+    color: var(--green-dark);
+    text-decoration: underline;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 100%);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+    color: var(--primary-gold);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-gold);
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    background: rgba(212, 175, 55, 0.1);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-gold);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.social-link:hover {
+    background: var(--primary-gold);
+    color: var(--green-dark);
+    border-color: var(--primary-gold);
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.footer-disclaimer {
+    font-size: 0.8rem !important;
+    opacity: 0.7;
+    max-width: 600px;
+}
+
+/* Scroll Up */
+.scroll-up {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--green-light);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-up:hover {
+    background: var(--primary-gold);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   RESPONSIVIDADE - TABLET
+   ============================================ */
+
+@media (max-width: 992px) {
+    .produto-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .produto-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .produto-hero-image {
+        order: -1;
+    }
+    
+    .image-wrapper {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .produto-hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+    
+    .produto-hero-title {
+        font-size: 2rem;
+    }
+    
+    .produto-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .produto-hero-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .image-wrapper {
+        max-width: 80%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .beneficio-card {
+        padding: 30px 25px;
+    }
+    
+    .para-quem-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-final-title {
+        font-size: 2rem;
+    }
+    
+    .preco-valor {
+        font-size: 2.5rem;
+    }
+    
+    .cta-final-garantia {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE - MOBILE
+   ============================================ */
+
+@media (max-width: 480px) {
+    .produto-hero {
+        padding: 90px 0 50px;
+    }
+    
+    .produto-hero-badge {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+    
+    .produto-hero-title {
+        font-size: 1.7rem;
+    }
+    
+    .produto-hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .stat-item {
+        padding: 15px 12px;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .image-wrapper {
+        max-width: 90%;
+    }
+    
+    .btn-large {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .produto-beneficios,
+    .produto-para-quem,
+    .produto-cta-final,
+    .faq-section {
+        padding: 60px 0;
+    }
+    
+    .beneficio-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 1.6rem;
+    }
+    
+    .para-quem-item {
+        padding: 15px 20px;
+    }
+    
+    .cta-final-title {
+        font-size: 1.7rem;
+    }
+    
+    .preco-destaque {
+        padding: 30px 20px;
+    }
+    
+    .preco-valor {
+        font-size: 2rem;
+    }
+    
+    .faq-pergunta {
+        padding: 18px 20px;
+    }
+    
+    .faq-pergunta h4 {
+        font-size: 1rem;
+    }
+    
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .scroll-up {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
