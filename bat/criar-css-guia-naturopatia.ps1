@@ -1,6 +1,31 @@
+# Criar CSS específico do Guia de Naturopatia
+$ErrorActionPreference = "Stop"
+
+Write-Host "========================================" -ForegroundColor Green
+Write-Host "CRIAR: CSS Guia Naturopatia" -ForegroundColor Green
+Write-Host "========================================`n" -ForegroundColor Green
+
+# Obter conteúdo do CSS original do último commit
+Write-Host "[1/3] Obtendo CSS original do git..." -ForegroundColor Yellow
+$cssOriginal = git show HEAD:css/curso-landing.css
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "ERRO: Falha ao obter CSS original!" -ForegroundColor Red
+    pause
+    exit 1
+}
+
+Write-Host "✓ CSS original obtido! ($($cssOriginal.Length) caracteres)`n" -ForegroundColor Green
+
+# Criar novo arquivo com o conteúdo original + estilos de certificações
+Write-Host "[2/3] Criando css/guia-naturopatia.css..." -ForegroundColor Yellow
+
+$cssNovo = @"
+$cssOriginal
+
 /* ============================================
    CERTIFICAÇÕES E RECONHECIMENTOS
-   Landing Page - Guia Prático de Naturopatia
+   Específico: Guia Prático de Naturopatia
    ============================================ */
 
 .certificacoes-section {
@@ -129,11 +154,7 @@
     color: #f4e4b8;
 }
 
-/* ============================================
-   RESPONSIVIDADE MOBILE
-   ============================================ */
-
-/* Tablets */
+/* Responsividade para Certificações - Tablets */
 @media (max-width: 768px) {
     .certificacoes-section {
         padding: 60px 0;
@@ -187,7 +208,7 @@
     }
 }
 
-/* Mobile */
+/* Responsividade para Certificações - Mobile */
 @media (max-width: 480px) {
     .certificacoes-section {
         padding: 40px 0;
@@ -248,4 +269,25 @@
         font-size: 1rem;
     }
 }
+"@
+
+[System.IO.File]::WriteAllText("css/guia-naturopatia.css", $cssNovo, [System.Text.Encoding]::UTF8)
+
+Write-Host "✓ Arquivo criado!`n" -ForegroundColor Green
+
+Write-Host "[3/3] Verificando arquivo..." -ForegroundColor Yellow
+if (Test-Path "css/guia-naturopatia.css") {
+    $fileSize = (Get-Item "css/guia-naturopatia.css").length
+    Write-Host "✓ css/guia-naturopatia.css criado! Tamanho: $fileSize bytes`n" -ForegroundColor Green
+}
+
+Write-Host "========================================" -ForegroundColor Green
+Write-Host "CSS CRIADO COM SUCESSO!" -ForegroundColor Green
+Write-Host "========================================`n" -ForegroundColor Green
+
+Write-Host "✅ PRÓXIMO PASSO:" -ForegroundColor Cyan
+Write-Host "   Atualizar html/guia-pratico-naturopatia.html" -ForegroundColor White
+Write-Host "   Trocar: curso-landing.css → guia-naturopatia.css`n" -ForegroundColor White
+
+pause
 

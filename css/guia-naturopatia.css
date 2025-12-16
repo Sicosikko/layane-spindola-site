@@ -1,0 +1,896 @@
+/* ============================================
+   GUIA PRÁTICO DE NATUROPATIA - LANDING PAGE
+   CSS Específico e Completo
+   Versão 1.0 - Mobile First
+   ============================================ */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.curso-hero {
+    min-height: 90vh;
+    padding: 120px 0 60px;
+    background: linear-gradient(135deg, #1a4d2e 0%, #2c5530 50%, #4f772d 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.curso-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.curso-hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.curso-hero-badge span {
+    color: #f4e4b8;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.curso-hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-gold {
+    color: #d4af37;
+}
+
+.curso-hero-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.curso-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.abrath-logo {
+    max-width: 80px;
+    height: auto;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+/* ============================================
+   SEÇÕES GERAIS
+   ============================================ */
+
+.curso-solucao,
+.sobre-layane,
+.curso-sessoes,
+.guia-doencas,
+.curso-conteudo,
+.acesso-imediato,
+.faq-section {
+    padding: 80px 0;
+}
+
+.curso-solucao {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c5530;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    position: relative;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #d4af37 0%, #f4e4b8 100%);
+    border-radius: 2px;
+}
+
+.solucao-intro,
+.solucao-desc {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.solucao-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.beneficio-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.beneficio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.beneficio-icon {
+    font-size: 2.5rem;
+    color: #4f772d;
+    flex-shrink: 0;
+}
+
+.beneficio-content h4 {
+    font-size: 1.3rem;
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+}
+
+.beneficio-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ============================================
+   SOBRE LAYANE
+   ============================================ */
+
+.sobre-layane {
+    background: #fff;
+}
+
+.sobre-layane-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.sobre-layane-image {
+    position: relative;
+}
+
+.image-frame-sobre {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.image-frame-sobre img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sobre-layane-description {
+    font-size: 1.05rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.sobre-layane-credentials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.credential-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.credential-item i {
+    font-size: 1.5rem;
+    color: #4f772d;
+}
+
+.credential-item span {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.sobre-layane-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.stat-box-sobre {
+    text-align: center;
+}
+
+.stat-number-sobre {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4f772d;
+}
+
+.stat-label-sobre {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ============================================
+   CERTIFICAÇÕES E RECONHECIMENTOS
+   ============================================ */
+
+.certificacoes-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.certificacoes-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 1rem auto 3rem;
+    line-height: 1.8;
+}
+
+.certificacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.certificacao-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(212, 175, 55, 0.1);
+}
+
+.certificacao-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.certificacao-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.certificacao-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    padding: 1rem;
+}
+
+.certificacao-card:hover .certificacao-image img {
+    transform: scale(1.05);
+}
+
+.certificacao-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.certificacao-info h3 {
+    font-size: 1.4rem;
+    color: #4f772d;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.certificacao-info h3 i {
+    margin-right: 0.5rem;
+    color: #d4af37;
+}
+
+.certificacao-info p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.curso-beneficios {
+    background: linear-gradient(135deg, #1a4d2e 0%, #2c5530 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    color: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.beneficios-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.beneficios-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.beneficios-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 1.6;
+}
+
+.beneficios-lista li:last-child {
+    border-bottom: none;
+}
+
+.beneficios-lista li i {
+    color: #d4af37;
+    font-size: 1.3rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.beneficios-lista li strong {
+    color: #f4e4b8;
+}
+
+/* ============================================
+   CONTEÚDO DO CURSO
+   ============================================ */
+
+.curso-conteudo {
+    background: #fff;
+}
+
+.conteudo-lista {
+    max-width: 900px;
+    margin: 3rem auto 0;
+}
+
+.conteudo-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    border-radius: 16px;
+    border-left: 5px solid #4f772d;
+    transition: all 0.3s ease;
+}
+
+.conteudo-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo-icon {
+    font-size: 2rem;
+    color: #4f772d;
+    flex-shrink: 0;
+}
+
+.conteudo-item h4 {
+    font-size: 1.3rem;
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+}
+
+.conteudo-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ============================================
+   FAQ
+   ============================================ */
+
+.faq-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c5530;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f8f9fa;
+}
+
+.faq-question i {
+    color: #4f772d;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer-content {
+    padding: 0 2rem 1.5rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+
+.curso-cta-final {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a4d2e 0%, #2c5530 100%);
+    text-align: center;
+    color: #fff;
+}
+
+.cta-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.cta-badge span {
+    color: #f4e4b8;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.cta-final-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.cta-final-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-final-preco {
+    margin: 2rem 0;
+}
+
+.preco-destaque {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    display: inline-block;
+    backdrop-filter: blur(10px);
+}
+
+.preco-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.preco-valor {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d4af37;
+}
+
+.preco-vista {
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #d4af37 0%, #f4e4b8 50%, #d4af37 100%);
+    color: #1a1a1a;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
+}
+
+.btn-large {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+
+.animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.animate-slide-down {
+    animation: slideDown 0.8s ease;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE MOBILE
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .curso-hero {
+        padding: 100px 0 40px;
+        min-height: auto;
+    }
+
+    .curso-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .curso-hero-title {
+        font-size: 2rem;
+    }
+
+    .curso-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .curso-hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .solucao-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-layane-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .sobre-layane-credentials {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-layane-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .certificacoes-section {
+        padding: 60px 0;
+    }
+
+    .certificacoes-intro {
+        font-size: 1.1rem;
+        margin: 1rem auto 2rem;
+        padding: 0 1rem;
+    }
+
+    .certificacoes-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .certificacao-image {
+        height: 250px;
+    }
+
+    .certificacao-info {
+        padding: 1.5rem;
+    }
+
+    .certificacao-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .curso-beneficios {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+
+    .beneficios-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-final-title {
+        font-size: 1.8rem;
+    }
+
+    .cta-final-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .curso-hero {
+        padding: 80px 0 30px;
+    }
+
+    .curso-hero-title {
+        font-size: 1.6rem;
+    }
+
+    .curso-hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .beneficio-item {
+        padding: 1.5rem;
+    }
+
+    .certificacoes-section {
+        padding: 40px 0;
+    }
+
+    .certificacoes-grid {
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .certificacao-image {
+        height: 200px;
+    }
+
+    .curso-beneficios {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .beneficios-title {
+        font-size: 1.3rem;
+    }
+
+    .beneficios-lista li {
+        font-size: 0.95rem;
+    }
+
+    .cta-final-title {
+        font-size: 1.5rem;
+    }
+
+    .preco-valor {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+
