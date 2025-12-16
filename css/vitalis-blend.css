@@ -45,12 +45,14 @@ h1, h2, h3, h4, h5, h6 {
    HERO SECTION (SESSÃO 01)
    ============================================= */
 .hero {
-    padding: 140px 0 80px !important;
-    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 100%) !important;
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 50%, var(--green-light) 100%) !important;
+    padding: 120px 0 80px !important;
     position: relative;
     overflow: hidden;
-    min-height: auto !important;
+    min-height: 90vh !important;
     max-height: none !important;
+    display: flex !important;
+    align-items: center !important;
 }
 
 .hero::before {
@@ -60,13 +62,23 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 70% 30%, rgba(201, 162, 39, 0.15) 0%, transparent 50%);
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
     pointer-events: none;
+}
+
+.hero .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .hero-content {
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: 1.1fr 0.9fr !important;
     gap: 60px;
     align-items: center;
     position: relative;
@@ -79,6 +91,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-image {
     grid-column: auto !important;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image .image-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
 }
 
 .hero-title {
@@ -795,21 +825,22 @@ h1, h2, h3, h4, h5, h6 {
    ============================================= */
 @media (max-width: 992px) {
     .hero {
-        padding: 120px 0 60px;
+        padding: 100px 0 60px !important;
+        min-height: auto !important;
     }
 
     .hero-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 40px;
         text-align: center;
     }
 
     .hero-text {
-        order: 1;
+        order: 2;
     }
 
     .hero-image {
-        order: 0;
+        order: 1;
     }
 
     .hero-title {
@@ -821,7 +852,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-image img {
-        max-width: 400px;
+        max-width: 350px;
     }
 
     .beneficios-content {
