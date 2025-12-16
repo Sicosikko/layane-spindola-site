@@ -1,0 +1,1000 @@
+/* ============================================
+   GUIA DE CURSOS - CSS DEDICADO
+   Versão 1.0 - Mobile First
+   ============================================ */
+
+/* Variáveis */
+:root {
+    --gold-primary: #d4af37;
+    --gold-light: #f4e4b8;
+    --green-dark: #1a4d2e;
+    --green-medium: #2c5530;
+    --green-light: #4f772d;
+    --white: #ffffff;
+    --off-white: #f8f9fa;
+    --text-dark: #333;
+    --text-medium: #666;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.guia-hero {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 50%, var(--green-light) 100%);
+    padding: 140px 0 100px;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    animation: backgroundMove 20s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.guia-hero-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--gold-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero-badge i {
+    margin-right: 8px;
+}
+
+.guia-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.text-gold {
+    color: var(--gold-primary);
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.guia-hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.guia-hero-desc {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta .btn-lg {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+}
+
+/* Animações */
+.animate-slide-down {
+    animation: slideDown 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ============================================
+   SEÇÕES DE CURSOS
+   ============================================ */
+
+.curso-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.curso-section:nth-child(odd) {
+    background: var(--white);
+}
+
+.curso-section:nth-child(even) {
+    background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+}
+
+.curso-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.curso-content.curso-reverse {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.curso-content.curso-reverse .curso-image {
+    order: 2;
+}
+
+.curso-content.curso-reverse .curso-info {
+    order: 1;
+}
+
+/* Imagem do Curso */
+.curso-image .image-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.curso-image .image-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.curso-image .image-frame:hover img {
+    transform: scale(1.05);
+}
+
+.curso-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, var(--gold-primary), #c9a227);
+    color: var(--green-dark);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Info do Curso */
+.curso-tag {
+    display: inline-block;
+    background: rgba(79, 119, 45, 0.1);
+    color: var(--green-light);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.curso-tag i {
+    margin-right: 8px;
+}
+
+.curso-titulo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--green-dark);
+    margin-bottom: 16px;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+.curso-headline {
+    font-size: 1.25rem;
+    color: var(--green-medium);
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.curso-subtitulo {
+    font-size: 1.1rem;
+    color: var(--gold-primary);
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+.curso-subtitulo-small {
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.curso-desc {
+    font-size: 1.05rem;
+    color: var(--text-medium);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.curso-destaque {
+    font-size: 1.1rem;
+    color: var(--green-dark);
+    font-weight: 600;
+    margin: 24px 0 16px;
+    padding-left: 16px;
+    border-left: 4px solid var(--gold-primary);
+}
+
+/* Lista de Benefícios */
+.curso-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+}
+
+.curso-beneficios li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    font-size: 1rem;
+    color: var(--text-dark);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.curso-beneficios li:last-child {
+    border-bottom: none;
+}
+
+.curso-beneficios li:hover {
+    padding-left: 8px;
+}
+
+.curso-beneficios li i {
+    color: var(--gold-primary);
+    font-size: 1.1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.curso-beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.curso-beneficios-grid li {
+    padding: 10px 0;
+    border-bottom: none;
+}
+
+/* ============================================
+   DIVISOR VITALIS
+   ============================================ */
+
+.divisor-vitalis {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-medium));
+    padding: 60px 0;
+    text-align: center;
+}
+
+.divisor-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.divisor-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: var(--gold-primary);
+    border-radius: 50%;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    color: var(--green-dark);
+}
+
+.divisor-content h3 {
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 12px;
+    font-family: 'Playfair Display', serif;
+}
+
+.divisor-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ============================================
+   VITALIS SECTIONS
+   ============================================ */
+
+.vitalis-section {
+    padding: 100px 0;
+}
+
+.vitalis-hero {
+    background: linear-gradient(135deg, #f8f5ef 0%, var(--white) 100%);
+}
+
+.vitalis-content {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.vitalis-frame {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.vitalis-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.vitalis-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--green-light), var(--green-medium));
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.vitalis-tag i {
+    margin-right: 8px;
+}
+
+.vitalis-titulo {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--green-dark);
+    margin-bottom: 24px;
+    font-family: 'Playfair Display', serif;
+}
+
+.vitalis-pergunta {
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.vitalis-sintomas {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.vitalis-destaque {
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid var(--gold-primary);
+}
+
+.vitalis-destaque strong {
+    color: var(--gold-primary);
+}
+
+.vitalis-chamada {
+    font-size: 1.2rem;
+    color: var(--green-dark);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.vitalis-resposta {
+    font-size: 1.3rem;
+    color: var(--green-light);
+    font-weight: 700;
+}
+
+.vitalis-resposta strong {
+    color: var(--gold-primary);
+}
+
+/* Vitalis Benefícios Grid */
+.vitalis-beneficios-section {
+    background: var(--white);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--green-dark);
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
+
+.vitalis-beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.vitalis-beneficio-card {
+    background: var(--off-white);
+    padding: 32px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.vitalis-beneficio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--gold-primary);
+}
+
+.vitalis-beneficio-card .beneficio-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--green-light), var(--green-medium));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.vitalis-beneficio-card:hover .beneficio-icon {
+    background: linear-gradient(135deg, var(--gold-primary), #c9a227);
+    transform: scale(1.1) rotate(10deg);
+}
+
+.vitalis-beneficio-card h4 {
+    font-size: 1.2rem;
+    color: var(--green-dark);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.vitalis-beneficio-card p {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    line-height: 1.6;
+}
+
+.vitalis-beneficio-full {
+    grid-column: span 3;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Vitalis Transformação */
+.vitalis-transformacao {
+    background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+}
+
+.transformacao-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.transformacao-subtitle {
+    font-size: 1.4rem;
+    color: var(--gold-primary);
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.transformacao-intro {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.transformacao-intro strong {
+    color: var(--green-dark);
+}
+
+.transformacao-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 40px 0;
+}
+
+.transformacao-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    background: var(--white);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.transformacao-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.transformacao-item i {
+    color: var(--green-light);
+    font-size: 1.1rem;
+}
+
+/* Composição */
+.vitalis-composicao {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-medium));
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.vitalis-composicao h3 {
+    font-size: 1.6rem;
+    color: var(--gold-primary);
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+.composicao-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.composicao-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.composicao-item i {
+    font-size: 2.5rem;
+    color: var(--gold-primary);
+    margin-bottom: 8px;
+}
+
+.composicao-item span {
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.composicao-item small {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.composicao-desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 16px;
+}
+
+.composicao-final {
+    font-size: 1.2rem;
+    color: var(--gold-light);
+}
+
+/* Vitalis CTA */
+.vitalis-cta {
+    background: linear-gradient(135deg, #f8f5ef 0%, var(--white) 100%);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-titulo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--green-dark);
+    margin-bottom: 24px;
+    font-family: 'Playfair Display', serif;
+}
+
+.cta-intro {
+    font-size: 1.15rem;
+    color: var(--text-medium);
+    margin-bottom: 12px;
+}
+
+.cta-intro strong {
+    color: var(--green-dark);
+}
+
+.cta-mudancas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 40px 0;
+}
+
+.cta-mudancas span {
+    padding: 12px 24px;
+    background: var(--off-white);
+    border-radius: 50px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.cta-mudancas span:hover {
+    background: var(--gold-primary);
+    color: var(--green-dark);
+    transform: scale(1.05);
+}
+
+.cta-mudancas span.destaque {
+    background: linear-gradient(135deg, var(--gold-primary), #c9a227);
+    color: var(--green-dark);
+    font-weight: 700;
+}
+
+.cta-final-vitalis {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-medium));
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-final-vitalis i {
+    font-size: 3rem;
+    color: var(--gold-primary);
+}
+
+.cta-final-vitalis p {
+    font-size: 1.3rem;
+    color: var(--white);
+    margin: 0;
+}
+
+.cta-final-vitalis strong {
+    color: var(--gold-primary);
+}
+
+/* ============================================
+   CTA FINAL DA PÁGINA
+   ============================================ */
+
+.guia-cta-final {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-medium));
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-final-content h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 16px;
+    font-family: 'Playfair Display', serif;
+}
+
+.cta-final-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn-lg {
+    padding: 18px 36px;
+    font-size: 1.05rem;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--green-dark);
+}
+
+/* ============================================
+   RESPONSIVIDADE - TABLET
+   ============================================ */
+
+@media (max-width: 992px) {
+    .guia-hero {
+        padding: 120px 0 80px;
+        min-height: auto;
+    }
+
+    .guia-hero-title {
+        font-size: 2.8rem;
+    }
+
+    .curso-content,
+    .curso-content.curso-reverse {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .curso-content.curso-reverse .curso-image,
+    .curso-content.curso-reverse .curso-info {
+        order: unset;
+    }
+
+    .curso-titulo {
+        font-size: 2rem;
+    }
+
+    .vitalis-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .vitalis-beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vitalis-beneficio-full {
+        grid-column: span 2;
+    }
+
+    .transformacao-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .composicao-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE - MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .guia-hero {
+        padding: 100px 0 60px;
+    }
+
+    .guia-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .guia-hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .guia-hero-desc {
+        font-size: 1rem;
+    }
+
+    .curso-section {
+        padding: 60px 0;
+    }
+
+    .curso-titulo {
+        font-size: 1.8rem;
+    }
+
+    .curso-headline {
+        font-size: 1.1rem;
+    }
+
+    .curso-beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .divisor-vitalis {
+        padding: 40px 0;
+    }
+
+    .divisor-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .divisor-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .vitalis-section {
+        padding: 60px 0;
+    }
+
+    .vitalis-titulo {
+        font-size: 2.2rem;
+    }
+
+    .vitalis-pergunta {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .vitalis-beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vitalis-beneficio-full {
+        grid-column: span 1;
+    }
+
+    .vitalis-beneficio-card {
+        padding: 24px;
+    }
+
+    .transformacao-lista {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .vitalis-composicao {
+        padding: 30px 20px;
+    }
+
+    .cta-final-vitalis {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .cta-final-vitalis p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .cta-titulo {
+        font-size: 1.8rem;
+    }
+
+    .cta-mudancas span {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+
+    .guia-cta-final {
+        padding: 60px 0;
+    }
+
+    .cta-final-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn-lg {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .guia-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-badge {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .curso-titulo {
+        font-size: 1.5rem;
+    }
+
+    .vitalis-titulo {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
