@@ -45,10 +45,12 @@ h1, h2, h3, h4, h5, h6 {
    HERO SECTION (SESSÃO 01)
    ============================================= */
 .hero {
-    padding: 140px 0 80px;
-    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 100%);
+    padding: 140px 0 80px !important;
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 100%) !important;
     position: relative;
     overflow: hidden;
+    min-height: auto !important;
+    max-height: none !important;
 }
 
 .hero::before {
@@ -63,12 +65,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 60px;
     align-items: center;
     position: relative;
     z-index: 1;
+}
+
+.hero-text {
+    grid-column: auto !important;
+}
+
+.hero-image {
+    grid-column: auto !important;
 }
 
 .hero-title {

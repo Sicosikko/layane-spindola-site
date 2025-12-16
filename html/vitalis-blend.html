@@ -20,66 +20,51 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="../index.html" class="logo">Layane Spindola</a>
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Layane Spindola</h2>
+                </div>
                 
-                <button class="nav-toggle" aria-label="Abrir menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <!-- Menu Desktop -->
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html#sobre" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="../index.html#cursos" class="nav-link">Produtos & Cursos <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="guia-de-cursos.html">Guia de Cursos</a></li>
+                                <li><a href="terapeuta-alta-performance.html">Terapeuta de Alta Performance</a></li>
+                                <li><a href="guia-pratico-naturopatia.html">Guia Prático de Naturopatia</a></li>
+                                <li><a href="programa-aceleracao-agape.html">Programa de Aceleração Ágape</a></li>
+                                <li><a href="protocolos-terapeuticos.html">Protocolos Terapêuticos</a></li>
+                                <li><a href="vitalis-blend.html">Vitalis Blend</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html#contato" class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </div>
                 
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="../index.html#cursos" class="nav-link">Produtos & Cursos <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="guia-de-cursos.html">Guia de Cursos</a></li>
-                            <li><a href="terapeuta-alta-performance.html">Terapeuta de Alta Performance</a></li>
-                            <li><a href="guia-pratico-naturopatia.html">Guia Prático de Naturopatia</a></li>
-                            <li><a href="programa-aceleracao-agape.html">Programa de Aceleração Ágape</a></li>
-                            <li><a href="protocolos-terapeuticos.html">Protocolos Terapêuticos</a></li>
-                            <li><a href="vitalis-blend.html">Vitalis Blend</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="../index.html#contato" class="nav-link">Contato</a></li>
-                    <li class="nav-item">
-                        <a href="#comprar" class="btn btn-primary nav-cta">Quero Comprar</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+                <div class="nav-cta">
+                    <a href="#comprar" class="btn btn-primary">Quero Comprar</a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
     </header>
-
-    <!-- Sidebar Mobile -->
-    <div class="sidebar-overlay"></div>
-    <div class="nav-menu sidebar">
-        <button class="sidebar-close" aria-label="Fechar menu">
-            <i class="fas fa-times"></i>
-        </button>
-        <ul>
-            <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
-            <li class="nav-item dropdown">
-                <a href="../index.html#cursos" class="nav-link">Produtos & Cursos <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="guia-de-cursos.html">Guia de Cursos</a></li>
-                    <li><a href="terapeuta-alta-performance.html">Terapeuta de Alta Performance</a></li>
-                    <li><a href="guia-pratico-naturopatia.html">Guia Prático de Naturopatia</a></li>
-                    <li><a href="programa-aceleracao-agape.html">Programa de Aceleração Ágape</a></li>
-                    <li><a href="protocolos-terapeuticos.html">Protocolos Terapêuticos</a></li>
-                    <li><a href="vitalis-blend.html">Vitalis Blend</a></li>
-                </ul>
-            </li>
-            <li class="nav-item"><a href="../index.html#contato" class="nav-link">Contato</a></li>
-            <li class="nav-item">
-                <a href="#comprar" class="btn btn-primary nav-cta">Quero Comprar</a>
-            </li>
-        </ul>
-    </div>
 
     <!-- SESSÃO 01 - Hero -->
     <section class="hero">
