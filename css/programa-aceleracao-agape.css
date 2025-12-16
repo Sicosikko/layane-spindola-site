@@ -48,19 +48,17 @@ h1, h2, h3, h4, h5, h6 {
 /* =============================================
    HERO SECTION
    ============================================= */
-.hero {
-    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 50%, var(--green-light) 100%) !important;
-    padding: 120px 0 80px !important;
+.produto-hero {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 50%, var(--green-light) 100%);
+    padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
-    min-height: 90vh !important;
-    max-height: none !important;
-    display: flex !important;
-    align-items: center !important;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
 }
 
-.hero::before {
-    content: '';
+.hero-background-animation {
     position: absolute;
     top: 0;
     left: 0;
@@ -73,116 +71,105 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
 }
 
-.hero .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.hero-content {
-    display: grid !important;
-    grid-template-columns: 1.1fr 0.9fr !important;
+.produto-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
     align-items: center;
     position: relative;
     z-index: 1;
 }
 
-.hero-text {
-    grid-column: auto !important;
+.produto-hero-text {
+    /* Texto à esquerda */
 }
 
-.hero-image {
-    grid-column: auto !important;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image .image-frame {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-}
-
-.hero-badge {
+.produto-hero-badge {
     display: inline-block;
-    background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
-    color: var(--green-dark);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
     padding: 8px 20px;
     border-radius: 30px;
-    font-size: 0.85rem;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.produto-hero-badge span {
+    color: #fff;
+    font-size: 0.9rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+    letter-spacing: 0.5px;
 }
 
-.hero-title {
-    font-size: 3rem;
-    color: var(--white);
+.produto-hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
     margin-bottom: 20px;
-    line-height: 1.2;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-.hero-subtitle {
-    font-size: 1.4rem;
+.produto-hero-subtitle {
+    font-size: 1.2rem;
     color: var(--gold-light);
     margin-bottom: 20px;
     font-weight: 500;
 }
 
-.hero-description {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
+.produto-hero-description {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: 20px;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
-.hero-highlight {
+.produto-hero-highlight {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 30px;
     padding: 15px 20px;
     background: rgba(255, 255, 255, 0.1);
     border-left: 3px solid var(--gold-primary);
     border-radius: 0 8px 8px 0;
+    backdrop-filter: blur(10px);
 }
 
-.hero-cta {
+.produto-hero-cta {
     display: flex;
     justify-content: flex-start;
 }
 
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.produto-hero-image {
+    position: relative;
 }
 
-.hero-image .image-frame {
+.produto-hero-image .image-wrapper {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
 }
 
-.hero-image img {
-    max-width: 100%;
+.produto-hero-image img {
+    width: 100%;
     height: auto;
     display: block;
     border-radius: 20px;
 }
+
+.produto-hero-image .image-glow {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    right: -20%;
+    bottom: -20%;
+    background: radial-gradient(circle, rgba(201, 162, 39, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
 
 /* =============================================
    BUTTONS
@@ -529,35 +516,36 @@ h1, h2, h3, h4, h5, h6 {
    RESPONSIVE - TABLET
    ============================================= */
 @media (max-width: 992px) {
-    .hero {
-        padding: 100px 0 60px !important;
-        min-height: auto !important;
+    .produto-hero {
+        padding: 100px 0 60px;
+        min-height: auto;
     }
 
-    .hero-content {
-        grid-template-columns: 1fr !important;
+    .produto-hero-grid {
+        grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
     }
 
-    .hero-text {
+    .produto-hero-text {
         order: 2;
     }
 
-    .hero-image {
+    .produto-hero-image {
         order: 1;
     }
 
-    .hero-title {
+    .produto-hero-title {
         font-size: 2.2rem;
     }
 
-    .hero-cta {
+    .produto-hero-cta {
         justify-content: center;
     }
 
-    .hero-image img {
+    .produto-hero-image img {
         max-width: 350px;
+        margin: 0 auto;
     }
 
     .resultados-grid {
@@ -578,23 +566,23 @@ h1, h2, h3, h4, h5, h6 {
    RESPONSIVE - MOBILE
    ============================================= */
 @media (max-width: 768px) {
-    .hero {
+    .produto-hero {
         padding: 100px 0 50px;
     }
 
-    .hero-title {
+    .produto-hero-title {
         font-size: 2rem;
     }
 
-    .hero-subtitle {
+    .produto-hero-subtitle {
         font-size: 1.1rem;
     }
 
-    .hero-description {
+    .produto-hero-description {
         font-size: 1rem;
     }
 
-    .hero-image img {
+    .produto-hero-image img {
         max-width: 280px;
     }
 
@@ -646,20 +634,20 @@ h1, h2, h3, h4, h5, h6 {
    RESPONSIVE - MOBILE PEQUENO
    ============================================= */
 @media (max-width: 480px) {
-    .hero-title {
+    .produto-hero-title {
         font-size: 1.7rem;
     }
 
-    .hero-subtitle {
+    .produto-hero-subtitle {
         font-size: 1rem;
     }
 
-    .hero-badge {
+    .produto-hero-badge {
         font-size: 0.75rem;
         padding: 6px 15px;
     }
 
-    .hero-image img {
+    .produto-hero-image img {
         max-width: 240px;
     }
 

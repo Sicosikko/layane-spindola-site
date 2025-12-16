@@ -44,19 +44,17 @@ h1, h2, h3, h4, h5, h6 {
 /* =============================================
    HERO SECTION (SESSÃO 01)
    ============================================= */
-.hero {
-    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 50%, var(--green-light) 100%) !important;
-    padding: 120px 0 80px !important;
+.produto-hero {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 50%, var(--green-light) 100%);
+    padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
-    min-height: 90vh !important;
-    max-height: none !important;
-    display: flex !important;
-    align-items: center !important;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
 }
 
-.hero::before {
-    content: '';
+.hero-background-animation {
     position: absolute;
     top: 0;
     left: 0;
@@ -69,121 +67,104 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
 }
 
-.hero .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.hero-content {
-    display: grid !important;
-    grid-template-columns: 1.1fr 0.9fr !important;
+.produto-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
     align-items: center;
     position: relative;
     z-index: 1;
 }
 
-.hero-text {
-    grid-column: auto !important;
+.produto-hero-text {
+    /* Texto à esquerda */
 }
 
-.hero-image {
-    grid-column: auto !important;
+.produto-hero-image {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.hero-image .image-frame {
+.produto-hero-image .image-wrapper {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
 }
 
-.hero-image img {
-    max-width: 100%;
+.produto-hero-image img {
+    width: 100%;
     height: auto;
     display: block;
     border-radius: 20px;
 }
 
-.hero-title {
+.produto-hero-image .image-glow {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    right: -20%;
+    bottom: -20%;
+    background: radial-gradient(circle, rgba(201, 162, 39, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.produto-hero-title {
     font-size: 2.5rem;
     color: var(--white);
     margin-bottom: 25px;
     line-height: 1.3;
+    font-family: 'Playfair Display', serif;
 }
 
-.hero-symptoms {
+.produto-hero-symptoms {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px 25px;
     border-radius: 15px;
     margin-bottom: 25px;
     border-left: 4px solid var(--gold-primary);
+    backdrop-filter: blur(10px);
 }
 
-.hero-symptoms p {
+.produto-hero-symptoms p {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.05rem;
     line-height: 1.7;
 }
 
-.hero-highlight {
+.produto-hero-highlight {
     font-size: 1.15rem;
     color: var(--white);
     margin-bottom: 20px;
 }
 
-.hero-highlight strong {
+.produto-hero-highlight strong {
     color: var(--gold-light);
 }
 
-.hero-message {
+.produto-hero-message {
     font-size: 1.3rem;
     color: var(--gold-light);
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.hero-answer {
+.produto-hero-answer {
     font-size: 1.5rem;
     color: var(--white);
     margin-bottom: 30px;
 }
 
-.hero-answer span {
+.produto-hero-answer span {
     color: var(--gold-light);
     font-weight: 700;
     font-family: 'Playfair Display', serif;
     font-size: 1.7rem;
 }
 
-.hero-cta {
+.produto-hero-cta {
     display: flex;
     justify-content: flex-start;
-}
-
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image .image-frame {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
 }
 
 /* =============================================
@@ -824,35 +805,36 @@ h1, h2, h3, h4, h5, h6 {
    RESPONSIVE - TABLET
    ============================================= */
 @media (max-width: 992px) {
-    .hero {
-        padding: 100px 0 60px !important;
-        min-height: auto !important;
+    .produto-hero {
+        padding: 100px 0 60px;
+        min-height: auto;
     }
 
-    .hero-content {
-        grid-template-columns: 1fr !important;
+    .produto-hero-grid {
+        grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
     }
 
-    .hero-text {
+    .produto-hero-text {
         order: 2;
     }
 
-    .hero-image {
+    .produto-hero-image {
         order: 1;
     }
 
-    .hero-title {
+    .produto-hero-title {
         font-size: 2rem;
     }
 
-    .hero-cta {
+    .produto-hero-cta {
         justify-content: center;
     }
 
-    .hero-image img {
+    .produto-hero-image img {
         max-width: 350px;
+        margin: 0 auto;
     }
 
     .beneficios-content {
@@ -944,23 +926,23 @@ h1, h2, h3, h4, h5, h6 {
         padding: 100px 0 50px;
     }
 
-    .hero-title {
+    .produto-hero-title {
         font-size: 1.7rem;
     }
 
-    .hero-symptoms {
+    .produto-hero-symptoms {
         padding: 15px 20px;
     }
 
-    .hero-symptoms p {
+    .produto-hero-symptoms p {
         font-size: 0.95rem;
     }
 
-    .hero-answer span {
+    .produto-hero-answer span {
         font-size: 1.4rem;
     }
 
-    .hero-image img {
+    .produto-hero-image img {
         max-width: 300px;
     }
 
@@ -1052,27 +1034,27 @@ h1, h2, h3, h4, h5, h6 {
    RESPONSIVE - MOBILE PEQUENO
    ============================================= */
 @media (max-width: 480px) {
-    .hero-title {
+    .produto-hero-title {
         font-size: 1.5rem;
     }
 
-    .hero-highlight {
+    .produto-hero-highlight {
         font-size: 1rem;
     }
 
-    .hero-message {
+    .produto-hero-message {
         font-size: 1.1rem;
     }
 
-    .hero-answer {
+    .produto-hero-answer {
         font-size: 1.2rem;
     }
 
-    .hero-answer span {
+    .produto-hero-answer span {
         font-size: 1.3rem;
     }
 
-    .hero-image img {
+    .produto-hero-image img {
         max-width: 250px;
     }
 
