@@ -14,7 +14,7 @@ git add -A
 
 echo.
 echo Criando commit...
-git commit -m "fix: ajustes CSS guia de cursos e correcao script.js - header menu estilizado padrao site principal - botao hero centralizado - tracinho dourado centralizado nos titulos - fontes Poppins e Playfair Display padronizadas - fix null check para header no script.js"
+git commit -m "fix: ajustes CSS guia de cursos e correcao script.js - header menu estilizado - botao hero centralizado - tracinho dourado centralizado - fontes padronizadas - fix null check script.js - badge passo reposicionada acima da imagem"
 
 if %errorlevel% neq 0 (
     echo.
