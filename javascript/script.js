@@ -14,14 +14,16 @@ function initNavigation() {
     const header = document.getElementById('header');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    // Header scroll effect
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    // Header scroll effect - só executa se o header existir
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
     
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
