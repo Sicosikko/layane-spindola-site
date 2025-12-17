@@ -653,17 +653,25 @@ section {
     }
 
     .curso-beneficios {
-        padding: 2rem;
+        padding: 2.5rem 2rem;
         margin: 0 1rem;
     }
 
     .beneficios-title {
         font-size: 1.5rem;
+        margin-bottom: 2.5rem;
     }
 
     .beneficios-lista li {
-        font-size: 1rem;
-        padding: 0.8rem 0;
+        font-size: 1.05rem;
+        padding: 1.2rem 0;
+        line-height: 1.8;
+        gap: 1.2rem;
+    }
+    
+    .beneficios-lista li i {
+        font-size: 1.4rem;
+        margin-top: 0.3rem;
     }
 }
 
@@ -690,17 +698,25 @@ section {
     }
 
     .curso-beneficios {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
         margin: 0 0.5rem;
     }
 
     .beneficios-title {
         font-size: 1.3rem;
+        margin-bottom: 2rem;
     }
 
     .beneficios-lista li {
-        font-size: 0.95rem;
-        padding: 0.7rem 0;
+        font-size: 1rem;
+        padding: 1rem 0;
+        line-height: 1.8;
+        gap: 1rem;
+    }
+    
+    .beneficios-lista li i {
+        font-size: 1.3rem;
+        margin-top: 0.2rem;
     }
 }
 
