@@ -809,15 +809,30 @@ h1, h2, h3, h4, h5, h6 {
     
     .produto-hero-title {
         font-size: 2rem;
+        text-align: center;
     }
     
     .produto-hero-subtitle {
         font-size: 1rem;
+        text-align: center;
     }
     
     .produto-hero-stats {
         grid-template-columns: 1fr;
         gap: 12px;
+        justify-items: center;
+    }
+    
+    .stat-item {
+        text-align: center;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .produto-hero-text .btn {
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
     }
     
     .image-wrapper {
@@ -826,6 +841,17 @@ h1, h2, h3, h4, h5, h6 {
     
     .section-title {
         font-size: 2rem;
+        text-align: center;
+    }
+    
+    .section-subtitle {
+        text-align: center;
+    }
+    
+    .btn {
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
     }
     
     .beneficios-grid {
