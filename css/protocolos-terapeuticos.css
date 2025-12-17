@@ -821,11 +821,15 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
         gap: 12px;
         justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .stat-item {
         text-align: center;
         max-width: 300px;
+        width: 100%;
         margin: 0 auto;
     }
     

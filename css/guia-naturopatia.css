@@ -1481,6 +1481,9 @@ section {
         gap: 12px;
         margin-bottom: 24px;
         justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .stat-item {
@@ -1488,6 +1491,7 @@ section {
         border-radius: 10px;
         text-align: center;
         max-width: 300px;
+        width: 100%;
         margin: 0 auto;
     }
     
