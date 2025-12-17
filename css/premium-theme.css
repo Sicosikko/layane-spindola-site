@@ -1124,6 +1124,11 @@ h1, h2, h3, h4, h5, h6 {
         display: flex !important;
     }
 
+    /* Esconder botão CTA do header no mobile */
+    .nav-cta {
+        display: none !important;
+    }
+
     .nav-menu.sidebar {
         display: none;
     }
