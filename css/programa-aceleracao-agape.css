@@ -8,9 +8,9 @@
     --gold-primary: #C9A227;
     --gold-light: #E8D48A;
     --gold-dark: #8B7020;
-    --green-dark: #1B3D2F;
-    --green-medium: #2D5A3D;
-    --green-light: #3D7A4D;
+    --green-dark: #1a4d2e;
+    --green-medium: #2c5530;
+    --green-light: #4f772d;
     --off-white: #F8F6F0;
     --white: #FFFFFF;
     --text-dark: #2C3E2D;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
    HERO SECTION
    ============================================= */
 .produto-hero {
-    background: linear-gradient(135deg, #1a4d2e 0%, #2c5530 50%, #4f772d 100%);
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 50%, var(--green-light) 100%);
     padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
@@ -61,8 +61,19 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    animation: backgroundMove 20s ease infinite;
+    background-size: 400% 400%;
     pointer-events: none;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .produto-hero .container {
