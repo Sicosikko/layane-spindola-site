@@ -1582,6 +1582,12 @@ section {
     
     .section-title {
         text-align: center;
+        padding-bottom: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .section-title::after {
+        bottom: -20px;
     }
     
     .section-subtitle {
@@ -1704,6 +1710,21 @@ section {
     
     .sobre-layane-text .section-title {
         font-size: 1.8rem;
+        padding-bottom: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .sobre-layane-text .section-title::after {
+        bottom: -20px;
+    }
+    
+    .section-title {
+        padding-bottom: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .section-title::after {
+        bottom: -20px;
     }
     
     .sobre-layane-description {
