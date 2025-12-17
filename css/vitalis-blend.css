@@ -816,6 +816,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .produto-hero-text {
         text-align: center;
+        order: 2;
     }
 
     .produto-hero-title {
@@ -829,6 +830,7 @@ h1, h2, h3, h4, h5, h6 {
     .produto-hero-image {
         max-width: 400px;
         margin: 0 auto;
+        order: -1;
     }
 
     .produto-hero-image img {

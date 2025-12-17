@@ -1448,6 +1448,14 @@ section {
         text-align: center;
     }
     
+    .curso-hero-image {
+        order: -1;
+    }
+    
+    .curso-hero-text {
+        order: 2;
+    }
+    
     .curso-hero-title {
         font-size: 2.1rem;
         margin-bottom: 18px;
