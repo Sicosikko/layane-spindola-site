@@ -49,13 +49,10 @@ h1, h2, h3, h4, h5, h6 {
    HERO SECTION
    ============================================= */
 .produto-hero {
-    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 50%, var(--green-light) 100%);
+    background: linear-gradient(135deg, #1a4d2e 0%, #2c5530 50%, #4f772d 100%);
     padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
 }
 
 .hero-background-animation {
@@ -64,16 +61,19 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     pointer-events: none;
+}
+
+.produto-hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .produto-hero-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 60px;
     align-items: center;
     position: relative;
@@ -518,34 +518,32 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 992px) {
     .produto-hero {
         padding: 100px 0 60px;
-        min-height: auto;
     }
 
     .produto-hero-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
+        gap: 30px;
     }
 
     .produto-hero-text {
-        order: 2;
-    }
-
-    .produto-hero-image {
-        order: 1;
+        text-align: center;
     }
 
     .produto-hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .produto-hero-cta {
         justify-content: center;
     }
 
-    .produto-hero-image img {
-        max-width: 350px;
+    .produto-hero-image {
+        max-width: 400px;
         margin: 0 auto;
+    }
+
+    .produto-hero-image img {
+        width: 100%;
     }
 
     .resultados-grid {
