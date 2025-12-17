@@ -1621,6 +1621,18 @@ section {
         text-align: center;
     }
     
+    .cta-final-preco {
+        margin-bottom: 40px;
+    }
+    
+    .cta-final-content .btn {
+        margin-bottom: 40px;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     .preco-valor {
         font-size: 2.5rem;
     }
@@ -1628,6 +1640,11 @@ section {
     .cta-final-garantia {
         flex-direction: column;
         gap: 16px;
+        margin-top: 0;
+    }
+    
+    .garantia-box {
+        margin-top: 0;
     }
     
     .solucao-intro {
@@ -1796,6 +1813,18 @@ section {
         font-size: 1.1rem;
     }
     
+    .cta-final-preco {
+        margin-bottom: 35px;
+    }
+    
+    .cta-final-content .btn {
+        margin-bottom: 35px;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     .preco-destaque {
         padding: 28px 20px;
     }
@@ -1806,6 +1835,14 @@ section {
     
     .preco-vista strong {
         font-size: 1.3rem;
+    }
+    
+    .cta-final-garantia {
+        margin-top: 0;
+    }
+    
+    .garantia-box {
+        margin-top: 0;
     }
     
     .solucao-intro {
