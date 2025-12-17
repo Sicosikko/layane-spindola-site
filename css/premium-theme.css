@@ -459,15 +459,24 @@ h1, h2, h3, h4, h5, h6 {
 .hero-photo img {
     width: 100%;
     height: auto;
-    display: block;
+    max-height: 550px;
+    object-fit: cover;
     border-radius: 20px;
-    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--primary-gold);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    filter: brightness(1.05) contrast(1.1);
 }
 
 .hero-photo img:hover {
-    transform: none;
+    transform: scale(1.05) translateY(-10px) rotateZ(1deg);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6),
+                0 5px 20px rgba(0, 0, 0, 0.6),
+                inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+    border-color: var(--gold-light);
+    filter: brightness(1.1) contrast(1.15);
 }
 
 .hero::before {
