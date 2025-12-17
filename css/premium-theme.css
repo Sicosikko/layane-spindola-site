@@ -1459,6 +1459,17 @@ h1, h2, h3, h4, h5, h6 {
     .footer-bottom p {
         font-size: 0.9rem;
     }
+
+    /* Botões responsivos para tablets */
+    .btn {
+        padding: 12px 28px;
+        font-size: 0.9rem;
+    }
+
+    .btn-large {
+        padding: 14px 32px;
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1473,6 +1484,17 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav-logo h2 {
         font-size: 1.3rem;
+    }
+
+    /* Botões ainda menores para mobile pequeno */
+    .btn {
+        padding: 10px 24px;
+        font-size: 0.85rem;
+    }
+
+    .btn-large {
+        padding: 12px 28px;
+        font-size: 0.9rem;
     }
 
     /* HERO MOBILE SMALL */
