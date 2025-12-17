@@ -1685,6 +1685,36 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* ===== RESPONSIVO MOBILE MUITO PEQUENO (MAX-WIDTH: 360px) ===== */
+@media (max-width: 360px) {
+    .nav-container {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .nav-logo h2 {
+        font-size: 1.1rem;
+    }
+
+    /* Botões do header ainda menores para telas muito pequenas */
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-large {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    /* Ajuste específico para botão do header */
+    .nav-cta .btn {
+        padding: 8px 14px;
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+}
+
 /* Utility Classes */
 .text-center {
     text-align: center;
