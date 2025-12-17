@@ -20,24 +20,26 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="../index.html" class="logo">Layane Spindola</a>
-                <button class="mobile-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="nav-menu">
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Layane Spindola</h2>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="nav-menu" id="nav-menu">
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="../index.html#sobre" class="nav-link">Quem Sou Eu</a>
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html#sobre" class="nav-link">Sobre</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">Produtos & Cursos <i class="fas fa-chevron-down"></i></a>
+                            <a href="../index.html#cursos" class="nav-link">Produtos & Cursos <i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="guia-de-cursos.html">📚 Guia de Cursos</a></li>
+                                <li><a href="guia-de-cursos.html">Guia de Cursos</a></li>
                                 <li><a href="terapeuta-alta-performance.html">Terapeuta de Alta Performance</a></li>
                                 <li><a href="guia-pratico-naturopatia.html">Guia Prático de Naturopatia</a></li>
                                 <li><a href="programa-aceleracao-agape.html">Programa de Aceleração Ágape</a></li>
@@ -46,15 +48,22 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="../index.html#testemunhos" class="nav-link">Testemunhos</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="../index.html#contato" class="nav-link">Contato</a>
                         </li>
                     </ul>
                 </div>
-            </nav>
-        </div>
+                
+                <div class="nav-cta">
+                    <a href="#cursos" class="btn btn-primary">Ver Cursos</a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -472,7 +481,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Layane Spindola. Todos os direitos reservados. | <a href="#termos">Termos de Uso</a> | <a href="#privacidade">Política de Privacidade</a></p>
+                <p>&copy; 2026 Layane Spindola. Todos os direitos reservados. | <a href="#termos">Termos de Uso</a> | <a href="#privacidade">Política de Privacidade</a></p>
                 <p class="footer-disclaimer">ABRATH Afiliação. Preços sujeitos a alteração. Resultados variam por dedicação individual.</p>
             </div>
         </div>
