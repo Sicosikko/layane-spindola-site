@@ -1087,6 +1087,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===== RESPONSIVO ===== */
+
+/* TABLET / IPAD */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        padding: 120px 0 3rem;
+    }
+
+    .hero .container {
+        gap: 2rem;
+        padding: 0 30px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .sobre-content {
+        gap: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .nav-logo h2 {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
@@ -1495,7 +1528,7 @@ h1, h2, h3, h4, h5, h6 {
 
     /* HERO MOBILE SMALL */
     .hero {
-        padding: 80px 0 1.5rem;
+        padding: 130px 0 1.5rem;
         min-height: auto;
         max-height: none;
     }
