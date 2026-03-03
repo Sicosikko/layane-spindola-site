@@ -680,6 +680,34 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba(255, 255, 255, 0.9);
 }
 
+/* Opções de Compra (4 botões) */
+.compra-opcoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-compra {
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px 20px;
+    font-size: 0.95rem;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-qtd {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: rgba(26, 77, 46, 0.25);
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
 .garantias {
     display: flex;
     justify-content: flex-start;
@@ -984,6 +1012,18 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
 
+    .compra-opcoes {
+        grid-template-columns: 1fr 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-compra {
+        display: flex;
+        width: 100%;
+    }
+
     .garantias {
         justify-content: center;
     }
@@ -1223,6 +1263,15 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         align-items: center;
         gap: 15px;
+    }
+
+    .compra-opcoes {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-compra {
+        font-size: 0.9rem;
+        padding: 15px 18px;
     }
 
     .preco-box {
